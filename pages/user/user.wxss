@@ -1,0 +1,95 @@
+/* pages/user/user.wxss */
+.header{
+  width: 100%;
+  height: 450rpx;
+  background-color: #F3F3F3
+}
+.header .vip-image{
+  position: absolute;
+  z-index: 10;
+  margin: 20rpx 0rpx 20rpx 45rpx;
+  width: 650rpx;
+  height:400rpx
+}
+.header .vip-image image{
+  border-radius: 30rpx;
+  width: 100%;
+  height: 100%
+}
+
+.header-content{
+  margin: 60rpx 0rpx 0rpx 100rpx;
+  position: absolute;
+  z-index: 20
+}
+
+.user-header{
+  display: flex;
+  flex-direction: row;
+  
+}
+.user-header .user-image{
+  width: 80rpx;
+  height:80rpx;
+}
+.user-header .user-image image{
+  border-radius: 50rpx;
+  width: 100%;
+  height:100%
+}
+.user-header .user-info{
+  color: #FFFFFF;
+  font-size: 25rpx;
+  margin: 10rpx 0rpx 0rpx 20rpx
+}
+.money{
+  margin-top: 130rpx;
+  display: flex;
+  flex-direction: row
+}
+.money .balance{
+  font-size: 25rpx;
+  color: #FFFFFF
+}
+.money .recharge{
+  line-height: 40rpx;
+  border-radius: 25rpx;
+  text-align: center;
+  width: 120rpx;
+  height: 40rpx;
+  border: 1rpx solid;
+  font-size: 25rpx;
+  color: #FFFFFF;
+  margin: 50rpx 0rpx 0rpx 230rpx
+}
+.content .content-item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1rpx #F3F3F3 solid
+}
+.content .content-item .item-image{
+  margin: 15rpx 0rpx 0rpx 40rpx;
+  width: 60rpx;
+  height: 60rpx
+}
+.content .content-item .item-image image{
+  border-radius: 50rpx;
+  width: 100%;
+  height: 100%
+}
+.content .content-item .item-info{
+  font-size: 30rpx;
+  color: #515151;
+  margin: 25rpx 0rpx 0rpx 10rpx
+}
+.content .content-item .arrow{
+  width: 40rpx;
+  height: 50rpx;
+  margin: 20rpx 0rpx 0rpx 420rpx
+}
+.content .content-item .arrow image{
+  width: 100%;
+  height:100%
+}

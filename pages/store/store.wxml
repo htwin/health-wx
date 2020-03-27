@@ -1,0 +1,63 @@
+<!--pages/store/store.wxml-->
+<view>
+<!-- 头部 -->
+  <view class="header">
+      <view class="store-name">
+          国际店(NO.22)
+      </view>
+      <view class="business-hours">
+          营业时间:<text>周一至周日 10:00-23:59</text>
+      </view>
+      <view class="address">
+        <view class="address-left">
+            门店地址:
+        </view>
+        <view class="address-detail">
+          成都市高新区长虹大酒店斜对面东方国际3栋1楼常乐足道
+        </view>
+        <view class="store-navigation">
+            <image src="../../images/address.png"></image>
+        </view>
+      </view>
+      <view class="store-tel">
+          <view class="store-tel-left">
+            联系电话:
+          </view>
+          <view class="phone-num">
+              0816-2557878
+          </view>
+          <view class="tel-img">
+               <image src="../../images/telephone.png"></image>
+          </view>
+      </view>
+  </view>
+
+  <!-- 分界线 -->
+  <view class="divide"></view>
+
+  <!-- 中间部分 -->
+  <view class="middle">
+      <view class="middle-text">
+          门店图片
+      </view>
+      <view class="store-images">
+          <image src="../../images/store1.png"></image>
+          <image src="../../images/store1.png"></image>
+          <image src="../../images/store1.png"></image>
+      </view>
+  </view>
+
+ <!-- 分界线 -->
+  <view class="divide"></view>
+
+   <!-- 底部 -->
+  <view class="bottom">
+      <view class="bottom-text">
+          门店地图
+      </view>
+      <view class="store-map">
+          <map longitude="104.0507197400" latitude="30.6900170200" ></map>
+      </view>
+  </view>
+
+</view>

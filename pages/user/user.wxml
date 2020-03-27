@@ -1,0 +1,114 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="header">
+    <view class="vip-image">
+      <image src="../../images/vip_1.png"></image>
+    </view>
+    <view class="header-content">
+     <view class="user-header">
+        <view class="user-image" bindtap="toUserInfo">
+          <image src="../../images/store1.png"></image>
+        </view>
+        <view class="user-info">
+          <text bindtap="toUserInfo">加入乐享会\n</text>
+          <text>151****2883</text>
+        </view>
+      </view>
+      <view class="money">
+        <view class="balance" >
+          余额:
+          <text>￥0.00\n</text> 充值余额:
+          <text>￥0.00\n</text> 赠送余额:
+          <text>￥0.00\n</text>
+        </view>
+        <view class="recharge">
+          去充值
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item1.png"></image>
+        </view>
+        <view class="item-info">
+          会员说明
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item2.png"></image>
+        </view>
+        <view class="item-info">
+          好礼红包
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item3.png"></image>
+        </view>
+        <view class="item-info">
+          消费记录
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item4.png"></image>
+        </view>
+        <view class="item-info">
+          代金券
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item5.png"></image>
+        </view>
+        <view class="item-info">
+          邀请好友
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item6.png"></image>
+        </view>
+        <view class="item-info">
+          消息中心
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+    <view class="content-item">
+        <view class="item-image">
+          <image src="../../images/user-item7.png"></image>
+        </view>
+        <view class="item-info">
+          关于我们
+        </view>
+        <view class="arrow">
+            <image src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+  </view>
+</view>

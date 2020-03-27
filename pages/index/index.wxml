@@ -1,0 +1,116 @@
+<!--index.wxml-->
+<view>
+  <scroll-view scroll-y="true" style="height:1200rpx" bindscrolltolower="loadMore">
+    <view class="header">
+      <view class="location ellipsis">
+        东莞
+        <image class="icon" src="../../images/icon_location.png" />
+      </view>
+
+      <view class="search" bindtap="tapSearch">
+        <image class="icon" src="../../images/icon_search.png" />
+        <i class="fa fa-home"></i>搜索门店
+      </view>
+
+      <view class="scancode" bindtap="toMessage">
+        <image class="code" src="../../images/message2.png" />
+      </view>
+
+    </view>
+
+    <view class="header_banner">
+      <view class="banner_top"></view>
+      <view class="banner_up"></view>
+    </view>
+    <view class="banner_center">
+      <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500">
+        <swiper-item class="swiper-item">
+          <image class="item-image" src="../../images/lunbo.png"></image>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+          <image class="item-image" src="../../images/lunbo.png"></image>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+          <image class="item-image" src="../../images/lunbo.png"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view style="height:10rpx;background-color:#F2F2F2;width:100%;position: relative;"></view>
+    <view class="nav_section">
+
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/store1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService"  class="section_cont">
+            <view class="store_name">
+              <text>国际店</text>
+            </view>
+            <view class="county">
+              金牛区
+            </view>
+            <view class="city">成都市金牛区大路1号</view>
+          </view>
+          <!--book-->
+          <view>
+            <view class="section_book">7.8公里</view>
+            <view bindtap="toStoreDetail" class="store_detail">门店详情</view>
+          </view>
+        </view>
+        
+      </block>
+
+      <block>
+        <view class="nav_section_items" >
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/store1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService" class="section_cont">
+            <view class="store_name">
+              <text>国际店</text>
+            </view>
+            <view class="county">
+              金牛区
+            </view>
+            <view class="city">成都市金牛区大路1号</view>
+          </view>
+          <!--book-->
+          <view>
+            <view class="section_book">7.8公里</view>
+            <view bindtap="toStoreDetail" class="store_detail">门店详情</view>
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/store1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService" class="section_cont">
+            <view class="store_name">
+              <text>国际店</text>
+            </view>
+            <view class="county">
+              金牛区
+            </view>
+            <view class="city">成都市金牛区大路1号</view>
+          </view>
+          <!--book-->
+          <view>
+            <view class="section_book">7.8公里</view>
+            <view bindtap="toStoreDetail" class="store_detail">门店详情</view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+  </scroll-view>
+</view>

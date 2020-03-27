@@ -1,0 +1,24 @@
+/* pages/gift/gift.wxss */
+.gift{
+ 
+  margin-top: 20rpx;
+  width: 100%;
+}
+.gift .gift-text{
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx
+  
+}
+
+.gift .gift-image{
+  
+  margin: 10rpx 75rpx 20rpx 75rpx;
+  height:350rpx;
+}
+.gift .gift-image image{
+  border-radius: 28rpx;
+  width: 100%;
+  height: 100%
+}

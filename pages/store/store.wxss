@@ -1,0 +1,96 @@
+/* pages/store/store.wxss */
+.header{
+  display: flex;
+  flex-direction: column
+}
+.header .store-name{
+  margin: 20rpx 0rpx 0rpx 20rpx;
+font-size: 30rpx
+}
+.header .business-hours{
+  margin: 20rpx 0rpx 0rpx 20rpx;
+  font-size: 25rpx
+}
+.header .business-hours text{
+  margin-left: 30rpx
+}
+
+.address{
+  margin: 20rpx 0rpx 0rpx 20rpx;
+  display: flex;
+  flex-direction: row
+}
+.address .address-left{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  width: 130rpx;
+ 
+}
+.address .address-detail{
+  font-size: 25rpx;
+  width: 500rpx;
+  
+
+}
+.address .store-navigation{
+  width: 40rpx;
+  height: 50rpx;
+}
+.address .store-navigation image{
+  width: 100%;
+  height: 100%
+}
+.store-tel{
+  margin: 20rpx 0rpx 0rpx 20rpx;
+   display: flex;
+  flex-direction: row
+}
+.store-tel .store-tel-left{
+  font-size: 25rpx;
+  width: 130rpx;
+}
+.store-tel .phone-num{
+font-size: 25rpx;
+  width: 200rpx;
+}
+.store-tel .tel-img{
+  margin-top: -10rpx;
+  margin-left: -10rpx;
+width: 40rpx;
+  height: 50rpx;
+}
+.store-tel .tel-img image{
+  width: 100%;
+  height: 100%
+}
+.divide{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 20rpx;
+  background-color: #F2F2F2
+}
+.middle .store-images{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 70rpx;
+}
+.middle .middle-text{
+  font-size: 30rpx;
+  margin: 30rpx 0rpx 0rpx 20rpx;
+}
+
+.middle .store-images image{
+  border-radius: 30rpx;
+  margin: 20rpx 20rpx 0rpx 25rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.bottom .bottom-text{
+   font-size: 30rpx;
+  margin: 30rpx 0rpx 0rpx 20rpx;
+}
+.bottom .store-map map{
+  margin: 20rpx 0rpx 0rpx 20rpx;
+  width: 700rpx;
+  height: 430rpx;
+}

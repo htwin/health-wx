@@ -1,0 +1,93 @@
+<!--pages/search/search.wxml-->
+<view>
+<view class="header">
+  <view class="search">
+    <view class="search-image">
+        <image class="icon" src="../../images/icon_search.png" />
+    </view>
+    <view class="search-content">
+        <input placeholder="搜索门店" bindinput='getInputValue' type="text"></input>
+    </view>
+      
+    </view>
+    <view class="search-btn">
+      <button size="mini" bindtap="doSearch">搜索</button>
+    </view>
+</view>
+  
+ <view class="nav_section">
+
+      <block>
+        <view class="nav_section_items" bindtap="navigateDetail">
+          <!--image-->
+          <view class="section_image">
+            <image src="../../images/store1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view class="section_cont">
+            <view class="store_name">
+              <text>国际店</text>
+            </view>
+            <view class="county">
+              金牛区
+            </view>
+            <view class="city">成都市金牛区大路1号</view>
+          </view>
+          <!--book-->
+          <view>
+            <view class="section_book">7.8公里</view>
+            <view class="store_detail">门店详情</view>
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class="nav_section_items" bindtap="navigateDetail">
+          <!--image-->
+          <view class="section_image">
+            <image src="../../images/store1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view class="section_cont">
+            <view class="store_name">
+              <text>国际店</text>
+            </view>
+            <view class="county">
+              金牛区
+            </view>
+            <view class="city">成都市金牛区大路1号</view>
+          </view>
+          <!--book-->
+          <view>
+            <view class="section_book">7.8公里</view>
+            <view class="store_detail">门店详情</view>
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class="nav_section_items" bindtap="navigateDetail">
+          <!--image-->
+          <view class="section_image">
+            <image src="../../images/store1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view class="section_cont">
+            <view class="store_name">
+              <text>国际店</text>
+            </view>
+            <view class="county">
+              金牛区
+            </view>
+            <view class="city">成都市金牛区大路1号</view>
+          </view>
+          <!--book-->
+          <view>
+            <view class="section_book">7.8公里</view>
+            <view class="store_detail">门店详情</view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+</view>

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/technicianDetail/technicianDetail",
+    "pages/toTechnician/toTechnician",
+    "pages/toProject/toProject",
+    "pages/toService/toService",
+    "pages/store/store",
+    "pages/search/search",
+    "pages/userDetail/userDetail",
+    "pages/user/user",
+    "pages/gift/gift",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/message/message"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#A40035",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#878787",
+    "selectedColor": "#d12a1a",
+    "borderStyle": "white",
+    "backgroundColor": "#fcfcfc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabBar/home_2.png",
+        "selectedIconPath": "images/tabBar/home_1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/gift/gift",
+        "iconPath": "images/tabBar/store_2.png",
+        "selectedIconPath": "images/tabBar/store_1.png",
+        "text": "好礼"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "images/tabBar/order_2.png",
+        "selectedIconPath": "images/tabBar/order_1.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/tabBar/mine_2.png",
+        "selectedIconPath": "images/tabBar/mine_1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

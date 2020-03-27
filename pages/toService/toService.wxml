@@ -1,0 +1,44 @@
+<!--pages/toService/toService.wxml-->
+<view>
+
+  <!-- 头部 -->
+  <view class="header">
+    <view class="service-store">
+
+      服务门店：
+      <text>国际店</text>
+    </view>
+    <view class="business-time">
+      营业时间：
+      <text>10:00-23:59</text>
+    </view>
+    <view class="service-start-time">
+      服务开始时间：
+      <text>{{year}}年{{month}}月{{day}}日{{h}}时{{m}}分</text>
+    </view>
+  </view>
+  <!-- 中间 -->
+
+  <view class="select-service-time">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{hs}}" style="line-height: 50px">{{item}}时</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{ms}}" style="line-height: 50px">{{item}}分</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
+  <!-- 底部 -->
+  <view class="bottom" bindtap="toProject">去选项目</view>
+</view>

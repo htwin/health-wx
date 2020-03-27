@@ -1,0 +1,140 @@
+<!--pages/toTechnician/toTechnician.wxml-->
+<!--pages/toProject/toProject.wxml-->
+<view>
+  
+  <view class="nav_section">
+
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/technician2.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService"  class="section_cont">
+            <view class="store_name">
+              <text space="ensp">陈木兰  评分:5.0分</text>
+              
+            </view>
+            <view class="tech-price">￥129元</view>
+            <view class="county" >
+              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+     <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/technician1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService"  class="section_cont">
+            <view class="store_name">
+              <text space="ensp">陈木兰  评分:5.0分</text>
+              
+            </view>
+            <view class="tech-price">￥129元</view>
+            <view class="county" >
+              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/technician3.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService"  class="section_cont">
+            <view class="store_name">
+              <text space="ensp">陈木兰  评分:5.0分</text>
+              
+            </view>
+            <view class="tech-price">￥129元</view>
+            <view class="county" >
+              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+<block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/technician3.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService"  class="section_cont">
+            <view class="store_name">
+              <text space="ensp">陈木兰  评分:5.0分</text>
+              
+            </view>
+            <view class="tech-price">￥129元</view>
+            <view class="county" >
+              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toService" class="section_image">
+            <image src="../../images/technician3.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toService"  class="section_cont">
+            <view class="store_name">
+              <text space="ensp">陈木兰  评分:5.0分</text>
+              
+            </view>
+            <view class="tech-price">￥129元</view>
+            <view class="county" >
+              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+      
+    </view>
+</view>
+

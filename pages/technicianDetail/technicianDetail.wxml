@@ -1,0 +1,157 @@
+<!--pages/technicianDetail/technicianDetail.wxml-->
+<view>
+  <!-- 技师头像简介 -->
+  <view class="nav_section_items">
+    <!--image-->
+    <view bindtap="toService" class="section_image">
+      <image src="../../images/technician3.png" mode="aspectFill"></image>
+    </view>
+    <!--content-->
+    <view bindtap="toService" class="section_cont">
+      <view class="store_name">
+        <text class="technician-name">陈木兰</text>
+        <text space="ensp">  ￥2元/分钟</text>
+      </view>
+      <view class="tech-price">评分：5.0分</view>
+    </view>
+  </view>
+  <!-- 技师简介 -->
+  <view class="introduction">
+    <text>个人简介：</text>
+    <view class="detail">
+      陈木兰进修于xxx推拿学院，学习了《天应推拿》、《吴若石新足部健康法》、《整脊踩跷》、《提神采耳》 等高端课程，擅长推拿、足疗、整脊等亚健康调理方式，能有效缓解身体不适症状。服务积极热情，注重服务细节。
+    </view>
+  </view>
+
+  <!-- 服务评价 -->
+  <view class="evaluation">
+    <view class="evaluation-top">
+      服务评价
+    </view>
+    <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+    <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+    <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+    <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+    <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+    <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+     <view class="evaluation_items">
+      <!--image-->
+      <view bindtap="toService" class="evaluation_image">
+        <image src="../../images/logo.png" mode="aspectFill"></image>
+      </view>
+      <!--content-->
+      <view bindtap="toService" class="evaluation_section_cont">
+        <view class="evaluation_name">
+          <text class="evaluation-name">182****5055</text>
+         
+        </view>
+        <view class="evaluation-price">客户评价:非常满意</view>
+      </view>
+      <view>
+          <view bindtap="toStoreDetail" class="store_detail">2020-03-26 23:05:13</view>
+      </view>
+    </view>
+  </view>
+   <!-- 服务评价 -->
+
+  <view class="select-btn">
+    选择该调理师
+  </view>
+
+</view>

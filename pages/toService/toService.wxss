@@ -1,0 +1,31 @@
+/* pages/toService/toService.wxss */
+.header .service-store{
+  font-size: 35rpx;
+  padding: 20rpx 0rpx 0rpx 20rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #f2f2f2
+}
+.header text{
+  color: #707070
+}
+.header .business-time{
+  font-size: 35rpx;
+  padding: 20rpx 0rpx 0rpx 20rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #f2f2f2
+}
+.header .service-start-time{
+  font-size: 35rpx;
+  padding: 20rpx 0rpx 0rpx 20rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #f2f2f2
+}
+.bottom{
+  margin-top: 200rpx;
+  font-size: 32rpx;
+  color: #f2f2f2;
+  text-align: center;
+  line-height: 65rpx;
+  height: 70rpx;
+  background-color: #A40035
+}

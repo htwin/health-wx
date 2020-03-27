@@ -1,0 +1,69 @@
+<!--pages/userDetail/userDetail.wxml-->
+<view class="content">
+
+
+
+  <view class="content-item">
+
+    <view class="item-info">
+      头像
+    </view>
+    <view class="item-image">
+      <image src="../../images/store1.png"></image>
+    </view>
+    <view class="arrow">
+      <image src="../../images/arrow-right.png"></image>
+    </view>
+  </view>
+
+  <view class="content-item">
+
+    <view class="item-info">
+      姓名
+    </view>
+    <view class="item-username">
+      <input type="text"></input>
+    </view>
+    <view class="arrow">
+      <image src="../../images/arrow-right.png"></image>
+    </view>
+  </view>
+  <view class="content-item">
+
+    <view class="item-info">
+      性别
+    </view>
+    <view class="item-sex">
+    <picker bindchange="bindSexChange" value="{{sexIndex}}" range="{{sex}}">
+    <view class="picker">
+      {{sex[sexIndex]}}
+    </view>
+  </picker>
+      
+    </view>
+    <view class="arrow">
+      <image src="../../images/arrow-right.png"></image>
+    </view>
+  </view>
+
+  <view class="content-item">
+
+    <view class="item-info">
+      生日
+    </view>
+    <view class="item-birthday">
+      <picker mode="date" value="{{birthday}}" bindchange="bindDateChange">
+        <view>
+          {{birthday}}
+        </view>
+      </picker>
+    </view>
+    <view class="arrow">
+      <image src="../../images/arrow-right.png"></image>
+    </view>
+  </view>
+  <view class="save-btn">
+
+    保存
+  </view>
+</view>

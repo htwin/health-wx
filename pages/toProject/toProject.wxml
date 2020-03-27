@@ -1,0 +1,98 @@
+<!--pages/toProject/toProject.wxml-->
+<view>
+  <view class="header">
+       <view class="project-item">
+          <image src="../../images/project1.png"></image>
+          <text>休闲放松</text>
+       </view>
+       <view class="project-item">
+          <image src="../../images/project.png"></image>
+          <text>身体疼痛</text>
+       </view>
+       <view class="project-item">
+          <image src="../../images/project3.png"></image>
+          <text>经络调理</text>
+       </view>
+       <view class="project-item">
+          <image src="../../images/project4.png"></image>
+          <text>女性专区</text>
+       </view>
+  </view>
+  <view class="nav_section">
+
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toTechnician" class="section_image">
+            <image src="../../images/project1_1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toTechnician"  class="section_cont">
+            <view class="store_name">
+              足疗+踩跷<text>￥129元/80分钟 </text>
+            </view>
+            <view class="county">
+              头面/手臂推拿10分钟(泡脚)+足疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toStoreDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toTechnician" class="section_image">
+            <image src="../../images/project1_1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toTechnician"  class="section_cont">
+            <view class="store_name">
+              足疗+踩跷<text>￥129元/80分钟 </text>
+            </view>
+            <view class="county">
+              头面/手臂推拿10分钟(泡脚)+足疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toStoreDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+      <block>
+        <view class="nav_section_items">
+          <!--image-->
+          <view bindtap="toTechnician" class="section_image">
+            <image src="../../images/project1_1.png" mode="aspectFill"></image>
+          </view>
+          <!--content-->
+          <view bindtap="toTechnician"  class="section_cont">
+            <view class="store_name">
+              足疗+踩跷<text>￥129元/80分钟 </text>
+            </view>
+            <view class="county">
+              头面/手臂推拿10分钟(泡脚)+足疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟
+            </view>
+            
+          </view>
+          <!--book-->
+          <view>
+            
+            <view bindtap="toStoreDetail" class="store_detail">查看详情</view>
+          </view>
+        </view>
+        
+      </block>
+
+      
+    </view>
+</view>
