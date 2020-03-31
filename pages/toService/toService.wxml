@@ -6,11 +6,11 @@
     <view class="service-store">
 
       服务门店：
-      <text>国际店</text>
+      <text>{{store.name}}</text>
     </view>
     <view class="business-time">
       营业时间：
-      <text>10:00-23:59</text>
+      <text>{{store.businessHours}}</text>
     </view>
     <view class="service-start-time">
       服务开始时间：

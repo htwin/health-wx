@@ -1,0 +1,37 @@
+<!--pages/contact/contact.wxml-->
+<view>
+    <view class="header">
+        <view class="logo">
+            <image src="../../images/logo.png"></image>
+        </view>
+        <view class="info">
+            足疗·踩跷·推拿
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="title">
+            常乐文化
+        </view>
+        <view class="content">
+            <text>
+                使命:提高亚健康人群生活品质
+                愿景:拥有健康常乐人生
+                定位：亚健康调理平台
+                身份：专注亚健康调养·始于1999
+                价值观：安全、舒适、有效
+            </text>
+        </view>
+
+         <view class="title">
+            联系我们
+        </view>
+        <view class="content">
+            <text>
+                官方微信:常乐健康调理
+                官方微博:常乐健康调理
+                官方号码:400-633-0933
+                官网网站:<text style="color:#A40035">www.changlechina.com</text>
+            </text>
+        </view>
+    </view>
+</view>

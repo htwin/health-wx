@@ -80,6 +80,7 @@
   height: 100%
 }
 .content .content-item .item-info{
+  width: 520rpx;
   font-size: 30rpx;
   color: #515151;
   margin: 25rpx 0rpx 0rpx 10rpx
@@ -87,7 +88,7 @@
 .content .content-item .arrow{
   width: 40rpx;
   height: 50rpx;
-  margin: 20rpx 0rpx 0rpx 420rpx
+  margin: 20rpx 0rpx 0rpx 0rpx
 }
 .content .content-item .arrow image{
   width: 100%;

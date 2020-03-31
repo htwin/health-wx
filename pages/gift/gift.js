@@ -7,7 +7,11 @@ Page({
   data: {
 
   },
-
+  toPayGift:function(){
+      wx.navigateTo({
+        url: '/pages/payGift/payGift',
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

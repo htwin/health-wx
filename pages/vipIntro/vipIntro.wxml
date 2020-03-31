@@ -1,0 +1,133 @@
+<!--pages/vipIntro/vipIntro.wxml-->
+<view>
+  <!-- 头部信息 -->
+  <view class="header">
+
+    <view class="method">
+      <view class="method1">
+        <image src="../../images/store1.png"></image>
+      </view>
+      <view class="method2">
+        <text>小明</text>
+        <text>\n182****2883</text>
+      </view>
+      <view class="method3">
+        升级指南
+      </view>
+    </view>
+  </view>
+
+  <!-- 中间会员名称 -->
+  <view class="middle">
+    <view class="vip-item">
+      <view class="vip-image">
+        <image src="../../images/vip1.png"></image>
+      </view>
+      <view class="vip-name">
+        心享级
+      </view>
+      <view class="select-line"> </view>
+    </view>
+    <!-- 中间线 -->
+    <view class="middle-line"></view>
+    <view class="vip-item">
+      <view class="vip-image">
+        <image src="../../images/vip2.png"></image>
+      </view>
+      <view class="vip-name">
+        银享级
+      </view>
+    </view>
+    <!-- 中间线 -->
+    <view class="middle-line"></view>
+    <view class="vip-item">
+      <view class="vip-image">
+        <image src="../../images/vip3.png"></image>
+      </view>
+      <view class="vip-name">
+        金享级
+      </view>
+    </view>
+    <!-- 中间线 -->
+    <view class="middle-line"></view>
+    <view class="vip-item">
+      <view class="vip-image">
+        <image src="../../images/vip4.png"></image>
+      </view>
+      <view class="vip-name">
+        玉石级
+      </view>
+    </view>
+    <!-- 中间线 -->
+    <view class="middle-line"></view>
+    <view class="vip-item">
+      <view class="vip-image">
+        <image src="../../images/vip5.png"></image>
+      </view>
+      <view class="vip-name">
+        钻石级
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom">
+      <view class="bottom-header">
+          心享级专属特权
+      </view>
+      <view class="bottom-item">
+          <view class="item-left">
+              <view class="item-image">
+                  <image src="../../images/privilege1.png"></image>
+              </view>
+              <view class="item-name">
+                  会员日
+              </view>
+          </view>
+          <view class="item-right">
+              每月9日为xx会员日，每个账户可享受一单立减9.9元(该优惠不与其他优惠共享)
+          </view>
+      </view>
+       <view class="bottom-item">
+          <view class="item-left">
+              <view class="item-image">
+                  <image src="../../images/privilege2.png"></image>
+              </view>
+              <view class="item-name">
+                  充值送
+              </view>
+          </view>
+          <view class="item-right">
+              充值1000、2000、3000元，充值成功后可获得10%的赠送金额
+          </view>
+      </view>
+       <view class="bottom-item">
+          <view class="item-left">
+              <view class="item-image">
+                  <image src="../../images/privilege3.png"></image>
+              </view>
+              <view class="item-name">
+                  生日礼
+              </view>
+          </view>
+          <view class="item-right">
+             赠送20元生日专属代金券，有效期15天
+          </view>
+      </view>
+       <view class="bottom-item">
+          <view class="item-left">
+              <view class="item-image">
+                  <image src="../../images/privilege4.png"></image>
+              </view>
+              <view class="item-name">
+                  无忧退单
+              </view>
+          </view>
+          <view class="item-right">
+              退单全额退还实际支付金额，不收取资源占用费(6月1次)
+          </view>
+      </view>
+
+  </view>
+
+
+</view>

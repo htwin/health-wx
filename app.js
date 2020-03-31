@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    //url:"https://wx.htjava.top/"
+    url: "http://localhost:8080"
   }
 })

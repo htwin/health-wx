@@ -1,0 +1,90 @@
+/* pages/pay/pay.wxss */
+.header-line{
+  text-align: center;
+  line-height: 50rpx;
+  height: 50rpx;
+  background-color: #f2f2f2
+}
+.header{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+ 
+  
+}
+.header .tech-image image{
+  margin-top: 20rpx;
+  border-radius: 100rpx;
+  width: 130rpx;
+  height: 130rpx;
+}
+.header .tech-image{
+  font-size: 28rpx;
+  text-align: center
+}
+.header .pay-info{
+  line-height: 50rpx;
+  margin-left: 25rpx;
+}
+.header .pay-info{
+  font-size: 25rpx;
+}
+.bottom{
+  height: 600rpx;
+  
+}
+.bottom .bottom-info{
+  padding: 20rpx 0rpx 20rpx 20rpx;
+  border-bottom: 1rpx solid #f2f2f2
+  
+}
+.bottom .method .money{
+  margin-left: 150rpx;
+}
+.bottom .method .money text{
+  margin-left: 5rpx
+}
+.bottom .method .money .text1{
+  font-size: 25rpx;
+}
+.bottom .method .money .text2{
+  margin-right: 20rpx;
+  color: #a40035
+    
+}
+.bottom .method .money .text3{
+ color: #a40035
+}
+.bottom .method{
+  line-height: 80rpx;
+  font-size: 26rpx;
+  margin-top: 5rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #f2f2f2;
+  background-color: white
+}
+.bottom .method .method1{
+  margin: 15rpx 0rpx 0rpx 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.bottom .method .method1 image{
+  width: 100%;
+  height: 100%
+}
+.bottom .method .method2{
+  margin-left: 20rpx
+}
+.select-btn{
+  
+  height: 60rpx;
+  background-color: #A40035;
+  color: #F5F5F5;
+  text-align: center;
+  line-height: 65rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}

@@ -1,0 +1,68 @@
+<!--pages/payGift/payGift.wxml-->
+<view>
+    <view class="big-image">
+        <image src="../../images/gift_1.png"></image>
+    </view>
+    <view class="small-image">
+        <image src="../../images/gift_1.png"></image>
+        <image src="../../images/gift_1.png"></image>
+        <image src="../../images/gift_1.png"></image>
+    </view>
+
+    <view class="select-item">
+        <view class="title">
+            选择商品
+        </view>
+        <view class="item">
+            <view class="item-image">
+                <image src="../../images/gift_1.png"></image>
+            </view>
+            <view class="item-price">
+                <view class="price-top">199元</view>
+                <view class="price-bottom">￥199.00</view>
+            </view>
+            <view class="pay-btn">
+                购买
+            </view>
+        </view>
+
+         <view class="item">
+            <view class="item-image">
+                <image src="../../images/gift_1.png"></image>
+            </view>
+            <view class="item-price">
+                <view class="price-top">500元</view>
+                <view class="price-bottom">￥500.00</view>
+            </view>
+            <view class="pay-btn">
+                购买
+            </view>
+        </view>
+
+         <view class="item">
+            <view class="item-image">
+                <image src="../../images/gift_1.png"></image>
+            </view>
+            <view class="item-price">
+                <view class="price-top">1000元</view>
+                <view class="price-bottom">￥1000.00</view>
+            </view>
+            <view class="pay-btn">
+                购买
+            </view>
+        </view>
+
+         <view class="item">
+            <view class="item-image">
+                <image src="../../images/gift_1.png"></image>
+            </view>
+            <view class="item-price">
+                <view class="price-top">2000元</view>
+                <view class="price-bottom">￥2000000.00</view>
+            </view>
+            <view class="pay-btn">
+                购买
+            </view>
+        </view>
+    </view>
+</view>

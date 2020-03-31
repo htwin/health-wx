@@ -7,8 +7,20 @@
   padding: 15rpx;
   box-sizing: border-box;
   z-index: 1;
-  background-color: #A40035;
+  background-color: #0F7E40;
   -webkit-transition: background 0.5s ease-in-out;
+}
+.cityList{
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  background-color: white
+   
+}
+.cityList .city-name{
+  height: 50rpx;
+  padding: 10rpx 0rpx 5rpx 20rpx;
+  border-bottom: 2rpx solid #f2f2f2
 }
 
 .header .icon {
@@ -80,7 +92,7 @@
 }
 .banner_top{
   height: 215rpx; 
-  background-color: #A40035;
+  background-color: #0F7E40;
 }
 .banner_up{
  height: 150rpx;
@@ -136,15 +148,15 @@
 }
 .nav_section_items .section_cont .county{
   margin: 10rpx 0rpx 30rpx 30rpx;
-    font-size:25rpx;
-    color:#a9a9a9;
+    font-size:30rpx;
+    color:#696F64;
     margin-left: 30rpx;
 }
 
 .nav_section_items .section_cont .city{
     font-size: 30rpx;
     line-height:60rpx;
-    color:#343434;
+    color:#696F64;
     margin-left: 30rpx;
 }
 
@@ -154,10 +166,10 @@
     
     background-size:17rpx 28rpx;
     line-height: 80rpx;
-    color:#A40035;
+    color:#060202;
     text-align: left;
     margin-top:5rpx;
-    padding-left:30rpx;
+    padding-left:10rpx;
 }
 .nav_section_items .store_detail{
    
@@ -168,7 +180,7 @@
     color:#a9a9a9;
     text-align: left;
     margin-top:40rpx;
-    padding-left:10rpx;
+    
 }
 
 

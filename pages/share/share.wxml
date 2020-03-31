@@ -1,0 +1,19 @@
+<!--pages/share/share.wxml-->
+<view>
+    <view class="header">
+        <image src="../../images/share1.png"></image>
+    </view>
+    <view class="bottom">
+      
+        <view class="bottom-title1">
+            分享健康，常乐人生
+        </view>
+        <view class="bottom-title2">
+            邀请好友进行健康体检
+        </view>
+        <view class="share-btn">
+            分享
+        </view>
+       
+    </view>
+</view>

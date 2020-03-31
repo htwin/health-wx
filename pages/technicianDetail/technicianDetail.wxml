@@ -9,17 +9,17 @@
     <!--content-->
     <view bindtap="toService" class="section_cont">
       <view class="store_name">
-        <text class="technician-name">陈木兰</text>
-        <text space="ensp">  ￥2元/分钟</text>
+        <text class="technician-name">{{technician.name}}</text>
+        <text space="ensp">  ￥{{technician.price}}元/分钟</text>
       </view>
-      <view class="tech-price">评分：5.0分</view>
+      <view class="tech-price">评分：{{technician.score}}分</view>
     </view>
   </view>
   <!-- 技师简介 -->
   <view class="introduction">
     <text>个人简介：</text>
     <view class="detail">
-      陈木兰进修于xxx推拿学院，学习了《天应推拿》、《吴若石新足部健康法》、《整脊踩跷》、《提神采耳》 等高端课程，擅长推拿、足疗、整脊等亚健康调理方式，能有效缓解身体不适症状。服务积极热情，注重服务细节。
+      {{technician.introduction}}
     </view>
   </view>
 
@@ -150,7 +150,7 @@
   </view>
    <!-- 服务评价 -->
 
-  <view class="select-btn">
+  <view bindtap="toPay" class="select-btn">
     选择该调理师
   </view>
 

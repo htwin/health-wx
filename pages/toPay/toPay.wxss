@@ -1,1 +1,90 @@
 /* pages/toPay/toPay.wxss */
+.header{
+  height: 350rpx;
+  background-color: #f2f2f2
+}
+.header .header-info{
+  padding: 20rpx 0rpx 20rpx 20rpx;
+  
+}
+.header .activity{
+  font-size: 26rpx;
+ margin-top: 5rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  
+  background-color: white
+}
+.header .activity .activity-name{
+  width: 550rpx;
+  line-height: 70rpx;
+  margin-left: 20rpx
+}
+.header .activity .activity-btn{
+  color: #A40035;
+    margin: 10rpx 0rpx 0rpx 0rpx;
+    line-height: 50rpx;
+    text-align: center; 
+    border-radius: 50rpx;
+    border: 1rpx solid #A40035;
+    width: 120rpx;
+    height: 50rpx;
+}
+.header .activity .choose-activity-btn{
+  background-color: #A40035;
+    color: #f2f2f2;
+    margin: 10rpx 0rpx 0rpx 0rpx;
+    line-height: 50rpx;
+    text-align: center; 
+    border-radius: 50rpx;
+    border: 1rpx solid #A40035;
+    width: 120rpx;
+    height: 50rpx;
+}
+.middle{
+  padding: 0rpx 0rpx 20rpx 20rpx;
+  font-size: 25rpx;
+  color: #8a8a8a
+}
+.bottom{
+  height: 600rpx;
+  background-color: #f2f2f2
+}
+.bottom .bottom-info{
+  padding: 20rpx 0rpx 20rpx 20rpx;
+  
+}
+.bottom .method{
+  line-height: 80rpx;
+  font-size: 26rpx;
+  margin-top: 5rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  
+  background-color: white
+}
+.bottom .method .method1{
+  margin: 15rpx 0rpx 0rpx 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.bottom .method .method1 image{
+  width: 100%;
+  height: 100%
+}
+.bottom .method .method2{
+  margin-left: 20rpx
+}
+.select-btn{
+  
+  height: 60rpx;
+  background-color: #A40035;
+  color: #F5F5F5;
+  text-align: center;
+  line-height: 65rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}

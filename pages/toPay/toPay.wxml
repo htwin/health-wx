@@ -1,2 +1,60 @@
 <!--pages/toPay/toPay.wxml-->
-<text>pages/toPay/toPay.wxml</text>
+<view>
+  <view class="header">
+    <view class="header-info">
+      储值活动
+    </view>
+    <block wx:for="{{saveActivityList}}" wx:key="key">
+      <view class="activity">
+        <view class="activity-name">
+          {{item.name}}
+        </view>
+        <view bindtap="chooseActivity" data-index="{{index}}" class="{{chooseActivity.id==item.id?'choose-activity-btn':'activity-btn'}}">
+          选择
+        </view>
+      </view>
+      <!-- <view class="activity">
+        <view class="activity-name">
+          充2000 送200元
+        </view>
+        <view class="activity-btn">
+          选择
+        </view>
+      </view>
+      <view class="activity">
+        <view class="activity-name">
+          充3000 送300元
+        </view>
+        <view class="activity-btn">
+          选择
+        </view>
+      </view> -->
+    </block>
+
+  </view>
+  <view class="middle">
+    <text>
+        致尊贵的会员:
+        感谢您信任常乐，成为常乐储值会员,我们将为您提供更便捷、更优惠的服务;
+        本次充值可享10%的赠送余额，赠送余额不退不换，在充值余额不足时使用;
+        您在消费中遇到的任何问题都可像我们反馈,我们将用心为您处理!
+        </text>
+  </view>
+
+  <view class="bottom">
+    <view class="bottom-info">
+      选择支付方式
+    </view>
+    <view class="method">
+      <view class="method1">
+        <image src="../../images/wx_logo.png"></image>
+      </view>
+      <view class="method2">
+        微信支付
+      </view>
+    </view>
+  </view>
+  <view bindtap="doPay" class="select-btn">
+    去支付
+  </view>
+</view>

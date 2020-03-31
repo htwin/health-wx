@@ -1,3 +1,4 @@
+const app = getApp()
 const date = new Date()
 const years = []
 const months = []
@@ -26,7 +27,7 @@ for(let i=0;i<=59;i++){
 
 Page({
   data: {
-
+    storeList:[],
     years: years,
     year: date.getFullYear(),
     months: months,
@@ -38,10 +39,64 @@ Page({
     ms:ms,
     m:0,
     value: [0,date.getMonth(),date.getDate()-1,0,0],
+    store:{}
   },
+
+  onLoad:function(e){
+     
+      //获取传过来的id
+      var storeId = e.storeId;
+      if(storeId!=undefined){
+        //根据id查询门店信息
+        this.getStoreById(storeId);
+      }else{
+        wx.showToast({
+          title: '异常id.undefined',
+        })
+      }
+    
+      
+  },
+
+  /**
+   * 根据id查询门店
+   */
+  getStoreById: function(storeId){
+      var that = this;
+      var url = app.globalData.url+"/store/"+storeId;
+      wx.showLoading({
+        title: '加载中',
+      })
+      wx.request({
+        url: url,
+        method:"get",
+        success:function(res){
+          if(res.data.success){
+            wx.hideLoading();
+            that.setData({
+              
+              store:res.data.data
+            })
+          }else{
+            wx.hideLoading()
+            wx.showToast({
+              title: '系统错误！！',
+              icon:"loading"
+            })
+          }
+        }
+      })
+  },
+
   toProject:function(){
+      var year = this.data.year;
+      var month = this.data.month;
+      var day = this.data.day;
+      var h = this.data.h;
+      var m = this.data.m;
+      var startTime = year+"-"+month+"-"+day+" "+h+":"+(m>9?m:"0"+m);//服务开始时间
       wx.navigateTo({
-        url: '/pages/toProject/toProject',
+        url: '/pages/toProject/toProject?storeId=' + this.data.store.id + "&startTime=" + startTime,
       })
   },
   bindChange: function (e) {

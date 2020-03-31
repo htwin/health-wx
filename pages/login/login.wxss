@@ -1,0 +1,55 @@
+/* pages/login/login.wxss */
+.login-form{
+  margin-top: 30rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+.login-form .telephone{
+  margin-top: 20rpx;
+  padding: 10rpx 0rpx 0rpx 40rpx;
+  height: 60rpx;
+  width: 63%;
+  border-radius: 30rpx;
+  border: 3rpx solid #A40035
+}
+.login-form .code{
+  
+  width: 70%;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+.login-form .code .code-form{
+  height: 60rpx;
+  padding: 10rpx 0rpx 0rpx 40rpx;
+  
+  width: 60%;
+  border-radius: 30rpx  0rpx  0rpx  30rpx;
+  border: 3rpx solid #A40035
+}
+.login-form .code .send-code{
+  height: 60rpx;
+  padding: 10rpx 0rpx 0rpx 40rpx;
+  width: 40%;
+  line-height: 50rpx;
+  color: white;
+  background-color: #A40035;
+   border-radius:  0rpx 30rpx 30rpx 0rpx;
+  border: 3rpx solid #A40035;
+  font-size: 30rpx;
+}
+.login-form .confirm{
+  
+  margin-top: 40rpx;
+  text-align: center;
+  line-height: 50rpx;
+  height: 60rpx;
+  width: 70%;
+  border-radius: 30rpx;
+  border: 3rpx solid #A40035;
+  background-color: #A40035;
+  color: white
+}

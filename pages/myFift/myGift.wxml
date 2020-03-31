@@ -1,0 +1,7 @@
+<!--pages/myFift/myGift.wxml-->
+<view>
+<view bindtap="toGift" class="no-gift">
+ 暂无好礼列表，点击此处可立即购买
+</view>
+ 
+</view>

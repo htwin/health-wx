@@ -1,11 +1,12 @@
 <!--pages/toProject/toProject.wxml-->
 <view>
   <view class="header">
-       <view class="project-item">
-          <image src="../../images/project1_red.png"></image>
-          <text>休闲放松</text>
+    <block wx:for="{{categoryList}}" wx:key="key">
+       <view bindtap="changeCategory" data-id="{{item.id}}" class="project-item">
+          <image src="{{categoryId==item.id?'../../images/project'+(index+1)+'_red.png':'../../images/project'+(index+1)+'.png'}}"></image>
+          <text style="{{categoryId==item.id?'color:#A40035':''}}">{{item.name}}</text>
        </view>
-       <view class="project-item">
+       <!-- <view class="project-item">
           <image src="../../images/project.png"></image>
           <text>身体疼痛</text>
        </view>
@@ -16,82 +17,36 @@
        <view class="project-item">
           <image src="../../images/project4.png"></image>
           <text>女性专区</text>
-       </view>
+       </view> -->
+       </block>
   </view>
   <view class="nav_section">
 
-      <block>
+      <block wx:for="{{healthItemList}}" wx:key="key">
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toTechnician" class="section_image">
-            <image src="../../images/project1_1.png" mode="aspectFill"></image>
+          <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}" class="section_image">
+            <image src="{{item.img}}" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toTechnician"  class="section_cont">
+          <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}"  class="section_cont">
             <view class="store_name">
-              足疗+踩跷<text>￥129元/80分钟 </text>
+              {{item.name}}<text>￥{{item.price}}元/{{item.serviceTime}}分钟 </text>
             </view>
             <view class="county">
-              头面/手臂推拿10分钟(泡脚)+足疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟
+              {{item.introduction}}
             </view>
             
           </view>
           <!--book-->
           <view>
             
-            <view bindtap="toProjectInfo" class="store_detail">查看详情</view>
+            <view bindtap="toProjectInfo" data-id="{{item.healthItemId}}" class="store_detail">查看详情</view>
           </view>
         </view>
         
       </block>
-      <block>
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnician" class="section_image">
-            <image src="../../images/project1_1.png" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnician"  class="section_cont">
-            <view class="store_name">
-              足疗+踩跷<text>￥129元/80分钟 </text>
-            </view>
-            <view class="county">
-              头面/手臂推拿10分钟(泡脚)+足疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toProjectInfo" class="store_detail">查看详情</view>
-          </view>
-        </view>
-        
-      </block>
-      <block>
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnician" class="section_image">
-            <image src="../../images/project1_1.png" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnician"  class="section_cont">
-            <view class="store_name">
-              足疗+踩跷<text>￥129元/80分钟 </text>
-            </view>
-            <view class="county">
-              头面/手臂推拿10分钟(泡脚)+足疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toProjectInfo" class="store_detail">查看详情</view>
-          </view>
-        </view>
-        
-      </block>
+     
 
       
     </view>

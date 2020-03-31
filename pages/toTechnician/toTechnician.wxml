@@ -4,136 +4,33 @@
   
   <view class="nav_section">
 
-      <block>
+      <block wx:for="{{technicianList}}" wx:key="{{key}}">
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toTechnicianDetail" class="section_image">
-            <image src="../../images/technician2.png" mode="aspectFill"></image>
+          <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   class="section_image">
+            <image src="{{item.img}}" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toTechnicianDetail"  class="section_cont">
+          <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   data-id="{{item.id}}"  class="section_cont">
             <view class="store_name">
-              <text space="ensp">陈木兰  评分:5.0分</text>
+              <text space="ensp">{{item.name}}  评分:{{item.score}}分</text>
               
             </view>
-            <view class="tech-price">￥129元</view>
+            <view class="tech-price">￥{{item.price}}元</view>
             <view class="county" >
-              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
+              <text>{{item.introduction}}</text>
             </view>
             
           </view>
           <!--book-->
           <view>
             
-            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
+            <view bindtap="toTechnicianDetail" data-id="{{item.id}}"  data-price="{{item.price}}"  class="store_detail">查看详情</view>
           </view>
         </view>
         
       </block>
-     <block>
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnicianDetail" class="section_image">
-            <image src="../../images/technician1.png" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnicianDetail"  class="section_cont">
-            <view class="store_name">
-              <text space="ensp">陈木兰  评分:5.0分</text>
-              
-            </view>
-            <view class="tech-price">￥129元</view>
-            <view class="county" >
-              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
-          </view>
-        </view>
-        
-      </block>
-      <block>
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnicianDetail" class="section_image">
-            <image src="../../images/technician3.png" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnicianDetail"  class="section_cont">
-            <view class="store_name">
-              <text space="ensp">陈木兰  评分:5.0分</text>
-              
-            </view>
-            <view class="tech-price">￥129元</view>
-            <view class="county" >
-              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
-          </view>
-        </view>
-        
-      </block>
-<block>
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnicianDetail" class="section_image">
-            <image src="../../images/technician3.png" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnicianDetail"  class="section_cont">
-            <view class="store_name">
-              <text space="ensp">陈木兰  评分:5.0分</text>
-              
-            </view>
-            <view class="tech-price">￥129元</view>
-            <view class="county" >
-              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
-          </view>
-        </view>
-        
-      </block>
-      <block>
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnicianDetail" class="section_image">
-            <image src="../../images/technician3.png" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnicianDetail"  class="section_cont">
-            <view class="store_name">
-              <text space="ensp">陈木兰  评分:5.0分</text>
-              
-            </view>
-            <view class="tech-price">￥129元</view>
-            <view class="county" >
-              <text>头面/手臂推拿10分钟(泡脚)+足\n疗30分钟+踩跷25分钟+肩颈腿推拿15分钟=80分钟</text>
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toTechnicianDetail" class="store_detail">查看详情</view>
-          </view>
-        </view>
-        
-      </block>
+    
       
     </view>
 
