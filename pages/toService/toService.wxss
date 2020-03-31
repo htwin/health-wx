@@ -21,11 +21,13 @@
   border-bottom: 1rpx solid #f2f2f2
 }
 .bottom{
-  margin-top: 200rpx;
-  font-size: 32rpx;
-  color: #f2f2f2;
+ 
+   height: 60rpx;
+  background-color: #A40035;
+  color: #F5F5F5;
   text-align: center;
   line-height: 65rpx;
-  height: 70rpx;
-  background-color: #A40035
+  position: fixed;
+  bottom: 0;
+  width: 100%
 }

@@ -2,7 +2,7 @@
 <view>
   <view class="header">
        <view class="project-item">
-          <image src="../../images/project1.png"></image>
+          <image src="../../images/project1_red.png"></image>
           <text>休闲放松</text>
        </view>
        <view class="project-item">
@@ -39,7 +39,7 @@
           <!--book-->
           <view>
             
-            <view bindtap="toStoreDetail" class="store_detail">查看详情</view>
+            <view bindtap="toProjectInfo" class="store_detail">查看详情</view>
           </view>
         </view>
         
@@ -63,7 +63,7 @@
           <!--book-->
           <view>
             
-            <view bindtap="toStoreDetail" class="store_detail">查看详情</view>
+            <view bindtap="toProjectInfo" class="store_detail">查看详情</view>
           </view>
         </view>
         
@@ -87,7 +87,7 @@
           <!--book-->
           <view>
             
-            <view bindtap="toStoreDetail" class="store_detail">查看详情</view>
+            <view bindtap="toProjectInfo" class="store_detail">查看详情</view>
           </view>
         </view>
         

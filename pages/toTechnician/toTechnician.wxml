@@ -7,11 +7,11 @@
       <block>
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toService" class="section_image">
+          <view bindtap="toTechnicianDetail" class="section_image">
             <image src="../../images/technician2.png" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toService"  class="section_cont">
+          <view bindtap="toTechnicianDetail"  class="section_cont">
             <view class="store_name">
               <text space="ensp">陈木兰  评分:5.0分</text>
               
@@ -33,11 +33,11 @@
      <block>
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toService" class="section_image">
+          <view bindtap="toTechnicianDetail" class="section_image">
             <image src="../../images/technician1.png" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toService"  class="section_cont">
+          <view bindtap="toTechnicianDetail"  class="section_cont">
             <view class="store_name">
               <text space="ensp">陈木兰  评分:5.0分</text>
               
@@ -59,11 +59,11 @@
       <block>
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toService" class="section_image">
+          <view bindtap="toTechnicianDetail" class="section_image">
             <image src="../../images/technician3.png" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toService"  class="section_cont">
+          <view bindtap="toTechnicianDetail"  class="section_cont">
             <view class="store_name">
               <text space="ensp">陈木兰  评分:5.0分</text>
               
@@ -85,11 +85,11 @@
 <block>
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toService" class="section_image">
+          <view bindtap="toTechnicianDetail" class="section_image">
             <image src="../../images/technician3.png" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toService"  class="section_cont">
+          <view bindtap="toTechnicianDetail"  class="section_cont">
             <view class="store_name">
               <text space="ensp">陈木兰  评分:5.0分</text>
               
@@ -111,11 +111,11 @@
       <block>
         <view class="nav_section_items">
           <!--image-->
-          <view bindtap="toService" class="section_image">
+          <view bindtap="toTechnicianDetail" class="section_image">
             <image src="../../images/technician3.png" mode="aspectFill"></image>
           </view>
           <!--content-->
-          <view bindtap="toService"  class="section_cont">
+          <view bindtap="toTechnicianDetail"  class="section_cont">
             <view class="store_name">
               <text space="ensp">陈木兰  评分:5.0分</text>
               
@@ -136,5 +136,7 @@
       </block>
       
     </view>
+
+
 </view>
 

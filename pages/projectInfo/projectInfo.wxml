@@ -1,0 +1,46 @@
+<!--pages/projectInfo/projectInfo.wxml-->
+<view>
+    <view class="header">
+        <view class="header-image">
+          <image src="../../images/project1_1_info.png"></image>
+        </view>
+    </view>
+    <view class="introduction">
+          <view class="introduction-header">
+              项目名称
+          </view>
+          <view class="introduction-content">
+              足疗+采耳
+          </view>
+    </view>
+     <view class="introduction">
+          <view class="introduction-header">
+              适宜人群
+          </view>
+          <view class="introduction-content">
+              身心长期处于紧绷状态，压力较大、头身困重等，需提神解压、舒缓疲劳的人士。
+          </view>
+    </view>
+     <view class="introduction">
+          <view class="introduction-header">
+              调理流程
+          </view>
+          <view class="introduction-content">
+              采耳+耳穴推拿20分钟(泡脚)+足疗30分钟+肩背部推拿20分钟=70分钟。
+          </view>
+    </view>
+     <view class="introduction">
+          <view class="introduction-header">
+              保养方法
+          </view>
+          <view class="introduction-content">
+          <text>1.建议常用泡脚会增加身体新陈代谢，有助于为消除疲劳，缓解压力。
+          2.人体耳部有260个穴位，是人体最完美的全息胚，每天自我揉按5分钟耳朵，能有效缓解精神紧张，舒缓疲劳。</text>
+              
+          </view>
+    </view>
+    <!-- 去选调理师按钮 -->
+    <view bindtap="toTechnician" class="select-btn">
+    去选调理师
+  </view>
+</view>

@@ -89,4 +89,15 @@
     
     padding-left:10rpx;
 }
+.select-btn{
+  
+  height: 60rpx;
+  background-color: #A40035;
+  color: #F5F5F5;
+  text-align: center;
+  line-height: 65rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
 

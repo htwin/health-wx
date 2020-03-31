@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/toPay/toPay",
     "pages/index/index",
+    "pages/projectInfo/projectInfo",
     "pages/technicianDetail/technicianDetail",
     "pages/toTechnician/toTechnician",
     "pages/toProject/toProject",

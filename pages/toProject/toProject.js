@@ -7,6 +7,11 @@ Page({
   data: {
 
   },
+  toProjectInfo:function(){
+      wx.navigateTo({
+        url: '/pages/projectInfo/projectInfo',
+      })
+  },
   toTechnician:function(){
     wx.navigateTo({
       url: '/pages/toTechnician/toTechnician',
