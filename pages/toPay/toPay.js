@@ -8,6 +8,99 @@ Page({
   data: {
       saveActivityList:[],//储值活动列表
       chooseActivity:{},//当前选择的储值活动对象
+      rechargeBalance:0//充值金额
+  },
+
+
+/**
+ * 获取输入的金额
+ */
+  getInputValue: function (e) {
+    this.setData({
+      rechargeBalance: e.detail.value
+    })
+    
+
+  },
+  toPay:function(){
+    var that = this;
+    var url = app.globalData.url + "/user/toPay"
+    //判断是否登录
+    var loginUser = wx.getStorageSync("loginUser");
+    if (loginUser != undefined && loginUser != null) {
+      var user ={};
+      user.id = loginUser.id
+      user.rechargeBalance = this.data.rechargeBalance
+      wx.showLoading({
+        title: '加载中',
+      })
+      wx.request({
+        url: url,
+        method: "post",
+        data:user,
+        success:function(res){
+          wx.hideLoading()
+          if(res.data.success){
+                wx.showModal({
+                  showCancel: false,
+                  content: '充值成功',
+                  success(res) {
+                    if (res.confirm) {
+                      //从缓存中获取用户信息
+                      var loginUser = wx.getStorageSync("loginUser");
+                      that.getUserByIdAndSave(loginUser.id);
+
+                     
+                    } 
+                  }
+                })
+          }else{
+            wx.showModal({
+              showCancel: false,
+              content: '系统繁忙！！',
+            })
+          }
+        }
+      })
+     
+     
+    } else {
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
+   
+  
+  },
+
+/**
+ * 根据id查询信息 存入缓存
+ */
+  getUserByIdAndSave:function(id){
+    var that = this;
+    var url = app.globalData.url + "/user/"+id;
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: url,
+      method:"get",
+      success:function(res){
+        wx.hideLoading();
+        if(res.data.success){
+            //存入缓存 用户信息
+            wx.setStorage({
+              key: 'loginUser',
+              data: res.data.data,
+            })
+          wx.reLaunch({
+            url: '/pages/user/user',
+          })
+        }else{
+           
+        }
+      }
+    })
   },
 
   /**

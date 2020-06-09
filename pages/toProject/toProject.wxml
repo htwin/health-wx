@@ -2,13 +2,13 @@
 <view>
   <view class="header">
     <block wx:for="{{categoryList}}" wx:key="key">
-       <view bindtap="changeCategory" data-id="{{item.id}}" class="project-item">
-          <image src="{{categoryId==item.id?'../../images/project'+(index+1)+'_red.png':'../../images/project'+(index+1)+'.png'}}"></image>
-          <text style="{{categoryId==item.id?'color:#A40035':''}}">{{item.name}}</text>
-       </view>
-       <!-- <view class="project-item">
+      <view bindtap="changeCategory" data-id="{{item.id}}" class="project-item">
+        <image src="{{'../../images/project'+(index+1)+(index+1)+'.png'}}"></image>
+        <text style="{{categoryId==item.id?'color:#0F7E40':''}}">{{item.name}}</text>
+      </view>
+      <!-- <view class="project-item">
           <image src="../../images/project.png"></image>
-          <text>身体疼痛</text>
+          <text>身体疼痛</text> 
        </view>
        <view class="project-item">
           <image src="../../images/project3.png"></image>
@@ -17,37 +17,41 @@
        <view class="project-item">
           <image src="../../images/project4.png"></image>
           <text>女性专区</text>
-       </view> -->
-       </block>
+       </view>  -->
+    </block>
   </view>
   <view class="nav_section">
 
-      <block wx:for="{{healthItemList}}" wx:key="key">
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}" class="section_image">
-            <image src="{{item.img}}" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}"  class="section_cont">
-            <view class="store_name">
-              {{item.name}}<text>￥{{item.price}}元/{{item.serviceTime}}分钟 </text>
-            </view>
-            <view class="county">
-              {{item.introduction}}
-            </view>
-            
-          </view>
-          <!--book-->
-          <view>
-            
-            <view bindtap="toProjectInfo" data-id="{{item.healthItemId}}" class="store_detail">查看详情</view>
-          </view>
+    <block wx:for="{{healthItemList}}" wx:key="key">
+      <view class="nav_section_items">
+       <view class="item">
+        <!--image-->
+        <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}" class="section_image">
+          <image src="{{item.img}}" mode="aspectFill"></image>
         </view>
-        
-      </block>
-     
+        <!--content-->
+        <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}" class="section_cont">
+          <view class="store_name">
+            {{item.name}}
+           
+          </view>
+          <view class="county">
+            {{item.introduction}}
+          </view>
 
-      
-    </view>
+        </view>
+        <!--book-->
+        <view class="item-price">
+        <view class="service-time">{{item.serviceTime}}分钟</view>
+        <view class="service-price">{{item.price}}元</view>
+        <view class="service-price">{{item.price}}元(会员)</view>
+          <view bindtap="toProjectInfo" data-id="{{item.healthItemId}}" class="store_detail">查看详情       </view>
+        </view>
+      </view>
+ </view>
+    </block>
+
+
+
+  </view>
 </view>

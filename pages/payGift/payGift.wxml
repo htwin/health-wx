@@ -1,13 +1,12 @@
 <!--pages/payGift/payGift.wxml-->
 <view>
-    <view class="big-image">
-        <image src="../../images/gift_1.png"></image>
+<view class="gift">
+        <text class="gift-text">感恩有您</text>
+        <view bindtap="toPayGift" class="gift-image">
+            <image src="../../images/gift_1.png"></image>
+        </view>
     </view>
-    <view class="small-image">
-        <image src="../../images/gift_1.png"></image>
-        <image src="../../images/gift_1.png"></image>
-        <image src="../../images/gift_1.png"></image>
-    </view>
+
 
     <view class="select-item">
         <view class="title">
@@ -16,10 +15,11 @@
         <view class="item">
             <view class="item-image">
                 <image src="../../images/gift_1.png"></image>
+                <view class="item-text">汉方排毒</view>
             </view>
             <view class="item-price">
-                <view class="price-top">199元</view>
-                <view class="price-bottom">￥199.00</view>
+                <view class="price-top">￥55</view>
+                <view class="price-bottom">￥40</view>
             </view>
             <view class="pay-btn">
                 购买
@@ -29,40 +29,17 @@
          <view class="item">
             <view class="item-image">
                 <image src="../../images/gift_1.png"></image>
+                <view class="item-text">田七/醋王</view>
             </view>
             <view class="item-price">
-                <view class="price-top">500元</view>
-                <view class="price-bottom">￥500.00</view>
+                <view class="price-top">￥45</view>
+                <view class="price-bottom">￥30</view>
             </view>
             <view class="pay-btn">
                 购买
             </view>
         </view>
 
-         <view class="item">
-            <view class="item-image">
-                <image src="../../images/gift_1.png"></image>
-            </view>
-            <view class="item-price">
-                <view class="price-top">1000元</view>
-                <view class="price-bottom">￥1000.00</view>
-            </view>
-            <view class="pay-btn">
-                购买
-            </view>
-        </view>
-
-         <view class="item">
-            <view class="item-image">
-                <image src="../../images/gift_1.png"></image>
-            </view>
-            <view class="item-price">
-                <view class="price-top">2000元</view>
-                <view class="price-bottom">￥2000000.00</view>
-            </view>
-            <view class="pay-btn">
-                购买
-            </view>
-        </view>
+        
     </view>
 </view>

@@ -1,19 +1,66 @@
 // pages/order/order.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+  
+    userId:"",//登录用户id
+    orderList:[]//订单列表
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      //判断用户是否登录
+    //判断是否登录
+    var loginUser = wx.getStorageSync("loginUser");
+    if (loginUser!=undefined&&loginUser!=null) {
+        this.setData({
+          userId:loginUser.id
+        })
+        //根据用户 id 获取该用户的订单列表信息
+      this.getOrderInfoByUserId();
+    } else {
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
   },
+
+
+/**
+ * 根据用户 id 获取该用户的订单列表信息
+ */
+getOrderInfoByUserId:function(){
+  var that = this;
+  var userId = this.data.userId;
+  var url = app.globalData.url +"/order/userOrderVo/"+userId
+  wx.showLoading({
+    title: '加载中',
+  })
+  wx.request({
+    url: url,
+    method:"get",
+    success:function(res){
+      wx.hideLoading();
+      if(res.data.success){
+          that.setData({
+            orderList:res.data.data
+          })
+      }else{
+        wx.showModal({
+          showCancel: false,
+          content: '加载订单失败',
+        })
+      }
+    }
+  })
+}
+  ,
 
   /**
    * 生命周期函数--监听页面初次渲染完成

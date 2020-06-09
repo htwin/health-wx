@@ -6,9 +6,10 @@
 
       <block wx:for="{{technicianList}}" wx:key="{{key}}">
         <view class="nav_section_items">
+        <view class="item">
           <!--image-->
-          <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   class="section_image">
-            <image src="{{item.img}}" mode="aspectFill"></image>
+          <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   data-id="{{item.id}}"    class="section_image"> 
+            <image  src="{{baseImgUrl+item.img}}" mode="aspectFill"></image>
           </view>
           <!--content-->
           <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   data-id="{{item.id}}"  class="section_cont">
@@ -16,7 +17,7 @@
               <text space="ensp">{{item.name}}  评分:{{item.score}}分</text>
               
             </view>
-            <view class="tech-price">￥{{item.price}}元</view>
+            <!-- <view class="tech-price">￥{{item.price}}元</view> -->
             <view class="county" >
               <text>{{item.introduction}}</text>
             </view>
@@ -28,7 +29,7 @@
             <view bindtap="toTechnicianDetail" data-id="{{item.id}}"  data-price="{{item.price}}"  class="store_detail">查看详情</view>
           </view>
         </view>
-        
+        </view>
       </block>
     
       

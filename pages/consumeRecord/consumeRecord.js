@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    consumeList:[{name:'111'}]//消费记录列表 
   },
 
   /**

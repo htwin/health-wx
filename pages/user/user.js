@@ -7,6 +7,12 @@ Page({
   data: {
     loginUser:{}//登录的用户信息
   },
+  toVouchers:function(){
+    wx.navigateTo({
+      url: '/pages/vouchers/vouchers',
+    })
+  }
+  ,
   toPay:function(){
     wx.navigateTo({
       url: '/pages/toPay/toPay',

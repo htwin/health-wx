@@ -6,6 +6,9 @@ var util = require('../../utils/util')
 
 Page({
   data: {
+    page:1,
+    size:10,
+    locationSuccess:false,//是否定位成功
     provinceNameArr:[],//省名列表
     cityNameArr: [],//城市名字 列表
     provinceList:[],//省列表json数据 数据库获取
@@ -21,11 +24,16 @@ Page({
     //用户所在地的经纬度
     userLongitude:"0",
     userLatitude:"0",
-    userCity:"成都市"
+    userCity:"成都市",
+    clickIndex:-1//点击的门店索引
+    
   },
  
   
   onLoad: function () {
+
+    
+    
 
     //判断是否登录
     var isLogin = wx.getStorageSync("loginUser");
@@ -33,13 +41,16 @@ Page({
     if (isLogin){
       //获取用户地理位置
       this.getAddressDetail();
-
-
       this.getProvinceList();//加载省份 城市 二级联动
 
 
       //加载城市列表
       this.getCityList();
+
+      
+
+
+      
     }else{
       wx.navigateTo({
         url: '/pages/login/login',
@@ -49,6 +60,7 @@ Page({
     
     
   },
+
 
   
 
@@ -119,6 +131,9 @@ Page({
    * 选择 省份 城市 时改变
    */
   bindMultiPickerColumnChange:function(e){
+    this.setData({
+      page:1
+    })
       console.log("点击的列为:"+e.detail.column+",值为："+e.detail.value);//省份列0 城市列1   值为数组索引
       var data={
         multiArray: this.data.multiArray, 
@@ -148,7 +163,8 @@ Page({
       multiIndex: e.detail.value,
       cityName:this.data.multiArray[1][this.data.multiIndex[1]]
     })
-    this.getStoreListByCityName(this.data.cityName);//根据城市名称 获取门店列表
+   // this.getStoreListByCityName(this.data.cityName);//根据城市名称 获取门店列表
+   this.getByCityNameAndLocationPage();
   },
  /**
   * 获取城市列表
@@ -177,22 +193,35 @@ Page({
      */
   getAddressDetail: function () {
     let that = this;
-    wx.getLocation({
+    wx.getLocation({ 
       type: 'wgs84',// 参考系
       success: function (res) {
         that.setData({
           userLatitude:res.latitude,
-          userLongitude:res.longitude
+          userLongitude:res.longitude,
         })
+
+        //将用户经纬度坐标放到 缓存
+        var userLocation ={};
+        userLocation.userLatitude = res.latitude;
+        userLocation.userLongitude = res.longitude;
+        wx.setStorage({
+          key: 'userLocation',
+          data: userLocation,
+        })
+  
         //获取城市名字
-        var qqMapApi = 'http://apis.map.qq.com/ws/geocoder/v1/' + "?location=" + res.latitude + ',' +
-          res.longitude + "&key=" + 'XVLBZ-BSU66-ULJSQ-MFGXD-TM7GZ-55F2M' + "&get_poi=1";
+        var qqMapApi = 'https://apis.map.qq.com/ws/geocoder/v1/' + "?location=" + res.latitude + ',' +
+          res.longitude + "&key=" + 'WVYBZ-4M33I-ZAFGU-5H3YJ-5PICS-6MFMJ' + "&get_poi=1";
 
         that.sendRequest(qqMapApi);
        
       },
       fail:function(res){
-        console.log("获取地理位置失败")
+        wx.showModal({
+          showCancel: false,
+          content: '定位失败，请检查网络或打开GPS',
+        })
       }
       
     })
@@ -208,29 +237,91 @@ Page({
       data: {},
       method: 'GET',
       success: (res) => {
-        console.log(res.data.result.address_component.city)
+        console.log("定位的城市"+res.data.result.address_component.city)
         if (res.statusCode == 200 && res.data.status == 0) {
-
+          that.setData({
+            locationSuccess:true
+          })
           //根据城市名字获取门店列表
-          this.getStoreListByCityName(res.data.result.address_component.city)
+          //this.getStoreListByCityName(res.data.result.address_component.city)
 
+          
           that.setData({
             userCity: res.data.result.address_component.city,
             cityName: res.data.result.address_component.city
           })
+
+          //根据城市名称   用户当前位置 获取门店列表 按照距离排序
+          this.getByCityNameAndLocationPage();
+          
           // 从返回值中提取需要的业务地理信息数据
           // that.setData({ nation: res.data.result.address_component.nation });
           // that.setData({ province: res.data.result.address_component.province });
           // that.setData({ city: res.data.result.address_component.city });
           // that.setData({ district: res.data.result.address_component.district });
           // that.setData({ street: res.data.result.address_component.street });
+        }else{
+          wx.showModal({
+            showCancel: false,
+            content: '定位失败，请检查网络或打开GPS',
+          })
         }
+      },
+      fail:function(){
+        wx.showModal({
+          showCancel: false,
+          content: '定位失败，请检查网络或打开GPS',
+        })
       }
     })
   },
   
   /**
-   * 根据城市名字获取城市列表
+   * 根据城市名称   用户当前位置 获取门店列表 按照距离排序
+   */
+  getByCityNameAndLocationPage:function(){
+    var that = this;
+    var cityName = this.data.cityName;
+    var latitude = this.data.userLatitude;
+    var longitude = this.data.userLongitude;
+    var page = this.data.page;
+    var size = this.data.size;
+    var url = app.globalData.url + "/store/storeListByCityNamePage/"+cityName+"/"+latitude+"/"+longitude+"/"+page+"/"+size;
+
+    //打开加载中提示
+    wx.showLoading({
+      title: '加载中',
+    })
+
+    wx.request({
+      url: url,
+      method: "get",
+      success: function (res) {
+
+        wx.hideLoading();//关闭加载中
+        if (res.data.success) {
+          //如果是第一页
+          if(page==1){
+            that.setData({
+              storeList: res.data.data
+            })
+          }else{
+            var storeList = that.data.storeList;
+            that.setData({
+              storeList: storeList.concat(res.data.data)
+            })
+          }
+         
+        } else {
+
+        }
+      }
+    })
+
+  }
+  ,
+  /**
+   * 根据城市名字获取门店列表
    */
   getStoreListByCityName:function(cityName){
     var url = app.globalData.url + "/store/storeListByCityName?cityName=" + cityName;
@@ -289,7 +380,10 @@ Page({
    * 跳转到选择服务项目界面
    */
   toService:function(e){
-   
+    console.log(e.currentTarget.dataset.index)
+    this.setData({
+      clickIndex:e.currentTarget.dataset.index
+    })
       wx.navigateTo({
         url: '/pages/toService/toService?storeId=' + e.currentTarget.dataset.id,
       })
@@ -307,13 +401,27 @@ Page({
    */
   tapSearch:function(){
     wx.navigateTo({
-      url: '/pages/search/search',
+      url: '/pages/search/search?cityName='+this.data.cityName,
     })
   },
   // 加载更多
   loadMore: function (e) {
+    this.setData({
+      page:this.data.page+1
+    })
+    this.getByCityNameAndLocationPage();//加载新的门店列表
     console.log('加载更多')
    
-  }
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    this.setData({
+      clickIndex:-1
+    })
+      console.log("页面隐藏")
+  },
  
 })

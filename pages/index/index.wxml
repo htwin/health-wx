@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <wxs module="culDis" src="../../utils/distance.wxs"></wxs>
-<view>
-  <scroll-view scroll-y="true" style="height:1200rpx" bindscrolltolower="loadMore">
+<view style="">
+  <scroll-view scroll-y="true" style="height:1300rpx" bindscrolltolower="loadMore">
     <view class="header">
       <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-        <view  class="location ellipsis">
+        <view class="location ellipsis">
           {{cityName}}
           <image class="icon" src="../../images/icon_location.png" />
 
@@ -21,7 +21,7 @@
       </view>
 
     </view>
-   
+
     <view class="header_banner">
       <view class="banner_top"></view>
       <view class="banner_up"></view>
@@ -43,35 +43,41 @@
     <view class="nav_section">
 
       <block wx:for="{{storeList}}" wx:key="key">
-        <view class="nav_section_items">
-          <!--image-->
-          <view bindtap="toService" wx:for-index="index" data-id="{{item.id}}" data-index="{{index}}" class="section_image">
-            <image src="{{item.img}}" mode="aspectFill"></image>
-          </view>
-          <!--content-->
-          <view bindtap="toService" wx:for-index="index" data-id="{{item.id}}" data-index="{{index}}" class="section_cont">
-            <view class="store_name">
-              <text>{{item.name}}</text>
+        <view class="nav_section_items" style="{{clickIndex==index?'background-color:#0F7E40':''}}">
+          <view class="item">
+            <!--image-->
+            <view bindtap="toService" wx:for-index="index" data-id="{{item.id}}" data-index="{{index}}" class="section_image">
+              <image src="{{item.img}}" mode="aspectFill"></image>
             </view>
-            <view class="county">
-              {{item.countyName}}
+            <!--content-->
+            <view bindtap="toService" wx:for-index="index" data-id="{{item.id}}" data-index="{{index}}" class="section_cont">
+              <view class="store_name">
+                <text>{{item.name}}</text>
+              </view>
+              <view class="county">
+                {{item.countyName}}
+              </view>
+              <view class="city">{{item.address}}</view>
             </view>
-            <view class="city">{{item.address}}</view>
-          </view>
-          <!--book-->
-          <view>
-            <view class="section_book">
-              <!-- 计算距离，根据经纬度 -->
-              {{ culDis.distance(item.latitude, item.longitude, userLatitude,userLongitude)}}
+            <!--book-->
+            <view>
+            
+              <view class="section_book">
+                <image src="../../images/foot.png"></image>
+                <!-- 计算距离，根据经纬度 -->
+                <!-- {{ culDis.distance(item.latitude, item.longitude, userLatitude,userLongitude,locationSuccess)}} -->
+                <view class="distance">
+                {{culDis.distance1(item.distance,locationSuccess)}} 
+                </view>
+                
+              </view>
+              <view bindtap="toStoreDetail" data-id="{{item.id}}" class="store_detail">门店详情</view>
             </view>
-            <view bindtap="toStoreDetail" data-id="{{item.id}}" class="store_detail">门店详情</view>
           </view>
         </view>
-
       </block>
 
 
     </view>
-
   </scroll-view>
 </view>

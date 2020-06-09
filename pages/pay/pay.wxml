@@ -25,43 +25,59 @@
                 项目金额： <text style="color:#A40035">￥{{payOrder.price}}</text>
             </view>
         </view>
+        <view class="cancel">x</view>
     </view>
     <view class="header-line"></view>
 
     <view class="bottom">
          <view class="bottom-info">
-            选择支付方式
+            支付方式
         </view>
         <view class="method">
             <view class="method1">
                 <image src="../../images/select.png"></image>
             </view>
-             <view class="method1">
+             <!-- <view class="method1">
                 <image src="../../images/my_money.png"></image>
-            </view>
+            </view> -->
             <view class="method2">
                 余额支付
             </view>
             <view class="money">
               <text class="text1">当前余额 </text>
               <text class="text2" >￥0.00</text>
-            <text class="text3" >去充值></text>
+              <text class="split-line">|</text>
+               <text class="text3" >充值</text>
             </view>
         </view>
         <view class="method">
             <view class="method1">
                 <image src="../../images/selected.png"></image>
             </view>
-             <view class="method1">
+             <!-- <view class="method1">
                 <image src="../../images/wx_logo.png"></image>
-            </view>
+            </view> -->
             <view class="method2">
                 微信支付
+            </view>
+        </view>
+         <view class="method">
+            <view class="method1">
+                <image src="../../images/select.png"></image>
+            </view>
+             
+            <view class="method2">
+                使用代金券
+            </view>
+             <view class="money">
+              <text class="text1">代金券抵扣 </text>
+              <text class="dai-money" >￥0.00</text>
+              
             </view>
         </view>
         
     </view>
     <view  bindtap="doPay" class="select-btn">
-    去支付
+    确认支付：￥{{payOrder.price}}
   </view>
 </view>

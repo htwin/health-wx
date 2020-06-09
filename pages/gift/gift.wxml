@@ -2,22 +2,27 @@
     <view class="gift">
         <text class="gift-text">感恩有您</text>
         <view bindtap="toPayGift" class="gift-image">
-            <image src="../../images/gift_1.png"></image>
+            <image src="../../images/gift_3.png"></image>
         </view>
     </view>
 
      <view class="gift">
-        <text class="gift-text">春天快乐</text>
+        <text class="gift-text">感恩有您</text>
         <view bindtap="toPayGift" class="gift-image">
-            <image src="../../images/gift_2.png"></image>
+            <image src="../../images/gift_3.png"></image>
         </view>
     </view>
 
      <view class="gift">
-        <text class="gift-text">友谊长存</text>
+        <text class="gift-text">感恩有您</text>
         <view class="gift-image">
-            <image bindtap="toPayGift" src="../../images/gift_1.png"></image>
+            <image bindtap="toPayGift" src="../../images/gift_3.png"></image>
         </view>
     </view>
-
+    <view class="gift">
+        <text class="gift-text">感恩有您</text>
+        <view class="gift-image">
+            <image bindtap="toPayGift" src="../../images/gift_3.png"></image>
+        </view>
+    </view>
 </view>

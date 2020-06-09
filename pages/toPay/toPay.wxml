@@ -1,4 +1,26 @@
-<!--pages/toPay/toPay.wxml-->
+
+<view>
+     <!-- <view class="header">
+        <image src="../../images/share1.png"></image>
+    </view> -->
+    <view class="login-form">
+       
+        <view class="code">
+            <view bindtap="getCode" class="send-code">
+               输入金额
+            </view>
+            <view class="code-form">
+              <input bindinput="getCodeInpt" bindinput='getInputValue' placeholder="输入金额"></input>
+            </view>
+           
+        </view>
+        <view bindtap="toPay" class="confirm">
+           充值
+        </view>
+    </view>
+</view>
+
+<!-- 
 <view>
   <view class="header">
     <view class="header-info">
@@ -13,22 +35,7 @@
           选择
         </view>
       </view>
-      <!-- <view class="activity">
-        <view class="activity-name">
-          充2000 送200元
-        </view>
-        <view class="activity-btn">
-          选择
-        </view>
-      </view>
-      <view class="activity">
-        <view class="activity-name">
-          充3000 送300元
-        </view>
-        <view class="activity-btn">
-          选择
-        </view>
-      </view> -->
+     
     </block>
 
   </view>
@@ -57,4 +64,4 @@
   <view bindtap="doPay" class="select-btn">
     去支付
   </view>
-</view>
+</view> -->

@@ -1,21 +1,22 @@
 /* pages/gift/gift.wxss */
 .gift{
- 
-  margin-top: 20rpx;
+  text-align: center;
+  margin-top:25rpx;
   width: 100%;
 }
 .gift .gift-text{
-  font-size: 30rpx;
-  color: #333333;
-  margin-left: 20rpx;
+ 
+  font-size: 32rpx;
+  color: #0F7E40;
+  
   margin-bottom: 20rpx
   
 }
 
 .gift .gift-image{
   
-  margin: 10rpx 75rpx 20rpx 75rpx;
-  height:350rpx;
+  margin: 10rpx 50rpx 20rpx 50rpx;
+  height:310rpx;
 }
 .gift .gift-image image{
   border-radius: 28rpx;

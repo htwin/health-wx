@@ -46,6 +46,7 @@ Page({
      
       //获取传过来的id
       var storeId = e.storeId;
+     
       if(storeId!=undefined){
         //根据id查询门店信息
         this.getStoreById(storeId);
@@ -94,7 +95,7 @@ Page({
       var day = this.data.day;
       var h = this.data.h;
       var m = this.data.m;
-      var startTime = year+"-"+month+"-"+day+" "+h+":"+(m>9?m:"0"+m);//服务开始时间
+      var startTime = year+"-"+month+"-"+day+"-"+h+":"+(m>9?m:"0"+m);//服务开始时间
       wx.navigateTo({
         url: '/pages/toProject/toProject?storeId=' + this.data.store.id + "&startTime=" + startTime,
       })

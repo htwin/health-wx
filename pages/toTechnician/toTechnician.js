@@ -10,7 +10,8 @@ Page({
     storeId: "",//门店id
     technicianList:[],//技师列表
     startTime:"",//服务开始时间
-    serviceTime:0//服务时间 分钟
+    serviceTime:0,//服务时间 分钟
+    baseImgUrl:"http://localhost"//图片地址
   }, 
   onLoad:function(e){
     //赋值 携带的参数

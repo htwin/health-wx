@@ -1,20 +1,91 @@
 // pages/store/store.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    store: {}//门店实体
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-      
+  onLoad: function (e) {
+    //获取传过来的id
+    var storeId = e.storeId;
+    if (storeId != undefined) {
+      //根据id查询门店信息
+      this.getStoreById(storeId);
+    } else {
+      wx.showToast({
+        title: '异常id.undefined',
+      })
+    }
+  },
+  /**
+  * 根据id查询门店
+  */
+  getStoreById: function (storeId) {
+    var that = this;
+    var url = app.globalData.url + "/store/" + storeId;
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: url,
+      method: "get",
+      success: function (res) {
+        if (res.data.success) {
+          wx.hideLoading();
+          that.setData({
+
+            store: res.data.data
+          })
+        } else {
+          wx.hideLoading()
+          wx.showToast({
+            title: '系统错误！！',
+            icon: "loading"
+          })
+        }
+      }
+    })
+  },
+  /**
+   * 拨打电话
+   */
+  CallPhone:function(){
+    wx.makePhoneCall({
+      phoneNumber: this.data.store.telephone,
+    })
+  }
+  ,
+  /**
+   * 跳转到选择服务项目界面
+   */
+  toService: function (e) {
+
+    wx.navigateTo({
+      url: '/pages/toService/toService?storeId=' + this.data.store.id,
+    })
   },
 
+  /**
+   * 打开地图
+   */
+  openMap:function(){
+    
+        wx.openLocation({
+          latitude: this.data.store.latitude,
+          longitude: this.data.store.longitude,
+          scale: 18,
+          name: this.data.store.address
+        })
+      
+  }
+  ,
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

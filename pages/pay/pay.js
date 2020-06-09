@@ -11,7 +11,9 @@ Page({
     payOrder:{},//支付订单数据
     minute:1,//分钟
     second:20,//秒
-    timer:''//定时器名字
+    timer:'',//定时器名字
+    starttime:"",//服务开始时间  存入数据库的 未处理的
+    isPay:false//是否支付
   },
 
   /**
@@ -45,8 +47,11 @@ Page({
           wx.hideLoading();
           if(res.data.success){
             var payOrder = res.data.data;
-            //处理后端传来的时间
-            payOrder.starttime = payOrder.starttime.substring(0, payOrder.starttime.lastIndexOf(":"))
+            //处理后端传来的时间  先存入到临时变量
+           that.setData({
+             starttime: payOrder.starttime
+           })
+            //payOrder.starttime = payOrder.starttime.substring(0, payOrder.starttime.lastIndexOf(":"))
             that.setData({
               payOrder: payOrder
             })
@@ -61,11 +66,48 @@ Page({
      *支付 
      */
   doPay: function () {
-
-    wx.showModal({
-
-      content: '暂缓开放...',
-      showCancel: false
+    var that = this;
+    var order={};
+    order.id = this.data.payOrder.id;
+    order.actualPay = this.data.payOrder.price;
+    // //将开始时间赋给 需要存入数据库的订单对象
+    // order.starttime = this.data.starttime;
+    console.log(order)
+    var url = app.globalData.url + "/order/doPay"
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: url,
+      method:"post",
+      data:order,
+      success:function(res){
+        wx.hideLoading();
+        if(res.data.success){
+          clearInterval(that.data.timer);//清除倒计时
+          //状态为已支付
+          that.setData({
+            isPay:true
+          })
+            wx.showModal({
+              showCancel:false,
+              content: '支付成功',
+              success(res) {
+                if (res.confirm) {
+                  wx.reLaunch({
+                    url: '/pages/order/order',
+                  })
+                } 
+              }
+            })
+           
+        }else{
+          wx.showModal({
+            showCancel: false,
+            content: '系统错误！！',
+          })
+        }
+      }
     })
 
   }
@@ -163,9 +205,13 @@ Page({
    */
   onUnload: function () {
     var that = this;
-    clearInterval(that.data.timer);//清除倒计时
-   
-    this.deleteOrder();//删除订单
+    var isPay = this.data.isPay
+    if (!isPay){
+      clearInterval(that.data.timer);//清除倒计时
+
+      this.deleteOrder();//删除订单
+    }
+    
    
         
   },

@@ -1,2 +1,8 @@
 <!--pages/message/message.wxml-->
-<text>没有信息</text>
+
+<view class="message">
+  <view class="item">
+      <text>您好，花园店 5月1日 7折优惠，欢迎您来！！！</text>
+      
+  </view>
+</view>

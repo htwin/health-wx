@@ -1,1 +1,16 @@
 /* pages/message/message.wxss */
+.message{
+  width: 700rpx;
+  padding: 30rpx 20rpx 0rpx 20rpx;
+}
+.message .item{
+    border-radius: 25rpx;
+    background-color: #0F7E40;
+    height: 220rpx;
+   
+    padding: 20rpx;
+}
+.message .item text{
+  color: white;
+  
+}

@@ -1,2 +1,20 @@
 <!--pages/order/order.wxml-->
-<text>没有订单</text>
+<view>
+    <view wx:if="{{orderList.length<1}}" class="no-order">
+        暂无订单
+    </view>
+     <block wx:if="{{orderList.length>0}}" wx:for="{{orderList}}" wx:key="key">
+          <view  class="have-order">
+          
+                  <view class="order-item">
+                      <view class="order-info">
+                          <text>项目：{{item.healthItemName}}\n</text>
+                          <text>店面：{{item.storeName}}\n</text>
+                          <text>技师：{{item.technicianName}}\n</text>
+                          <text>时间：{{item.starttime}}</text>
+                      </view>
+                  </view>
+            
+          </view>
+    </block>
+</view>

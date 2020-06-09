@@ -1,18 +1,19 @@
 /* pages/contact/contact.wxss */
 .header{
-  background-color: #F7F7F7;
-  height: 300rpx;
+ 
+  height: 400rpx;
 }
 .header .logo{
-  padding-top: 30rpx;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  
  
 }
 .header .logo image{
-  border-radius: 100rpx;
-  width: 200rpx;
-  height:200rpx;
+
+  width: 100%;
+  height: 100%
+  
 }
 .header .info{
   color: #A40035;
@@ -20,7 +21,7 @@
 }
 .bottom .title{
   padding: 20rpx;
-  border-bottom: 1rpx solid #f2f2f2
+  border-bottom: 5rpx solid #f2f2f2
 }
 .bottom .content{
   margin-top: -80rpx;

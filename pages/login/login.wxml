@@ -1,19 +1,24 @@
 <!--pages/login/login.wxml-->
 <view>
-     <view class="header">
+     <!-- <view class="header">
         <image src="../../images/share1.png"></image>
-    </view>
+    </view> -->
+    <view class="logo">
+          <image src="../../images/logo2.png"></image>
+        </view>
     <view class="login-form">
+        
         <view class="telephone">
-          <input bindinput="getTelephoneInpt" placeholder="手机号"></input>
+          <input bindinput="getTelephoneInpt" placeholder="输入手机号"></input>
         </view>
         <view class="code">
-            <view class="code-form">
-              <input bindinput="getCodeInpt" placeholder="验证码"></input>
-            </view>
             <view bindtap="getCode" class="send-code">
                获取验证码
             </view>
+            <view class="code-form">
+              <input bindinput="getCodeInpt" placeholder="输入验证码"></input>
+            </view>
+           
         </view>
         <view bindtap="loginOrRegister" class="confirm">
            确认

@@ -1,19 +1,30 @@
 /* pages/login/login.wxss */
-.login-form{
-  margin-top: 30rpx;
+.logo{
+  height: 400rpx;
+}
+.logo image{
   width: 100%;
+  height: 100%
+}
+.login-form{
+  background-color: #0F7E40;
+  border-radius: 10rpx;
+  margin: 30rpx;
+  width: 700rpx;
+  height: 400rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;  
 }
 .login-form .telephone{
-  margin-top: 20rpx;
+  background-color: white;
+  
   padding: 10rpx 0rpx 0rpx 40rpx;
   height: 60rpx;
-  width: 63%;
-  border-radius: 30rpx;
-  border: 3rpx solid #A40035
+  width: 65%;
+  border-radius: 10rpx;
+  
 }
 .login-form .code{
   
@@ -23,33 +34,34 @@
   flex-direction: row;
 }
 .login-form .code .code-form{
+  background-color: white;
   height: 60rpx;
   padding: 10rpx 0rpx 0rpx 40rpx;
   
   width: 60%;
-  border-radius: 30rpx  0rpx  0rpx  30rpx;
-  border: 3rpx solid #A40035
+  border-radius: 0rpx  10rpx  10rpx  0rpx;
+ 
 }
 .login-form .code .send-code{
   height: 60rpx;
   padding: 10rpx 0rpx 0rpx 40rpx;
   width: 40%;
   line-height: 50rpx;
-  color: white;
-  background-color: #A40035;
-   border-radius:  0rpx 30rpx 30rpx 0rpx;
-  border: 3rpx solid #A40035;
+  color: black;
+  background-color: white;
+   border-radius:  10rpx 0rpx 0rpx 10rpx;
+  
   font-size: 30rpx;
 }
 .login-form .confirm{
   
-  margin-top: 40rpx;
+  margin-top: 30rpx;
   text-align: center;
-  line-height: 50rpx;
+  line-height: 60rpx;
   height: 60rpx;
   width: 70%;
-  border-radius: 30rpx;
-  border: 3rpx solid #A40035;
-  background-color: #A40035;
-  color: white
+  border-radius: 20rpx;
+  border: 3rpx solid white;
+  background-color: white;
+  color: black
 }

@@ -3,14 +3,22 @@
   text-align: center;
   line-height: 50rpx;
   height: 50rpx;
-  background-color: #f2f2f2
 }
 .header{
+  margin-left: 25rpx;
+  width: 660rpx;
+  background-color: #DBE2DC;
   padding: 20rpx;
   display: flex;
   flex-direction: row;
- 
-  
+  border-radius: 10rpx;
+}
+.header .cancel{
+  margin-top: -20rpx;
+  margin-left: 80rpx;
+  color: #0F7E40;
+  font-size: 50rpx;
+  font-weight: 550
 }
 .header .tech-image image{
   margin-top: 20rpx;
@@ -25,6 +33,10 @@
 .header .pay-info{
   line-height: 50rpx;
   margin-left: 25rpx;
+  
+}
+.header .pay-info .start-time{
+ width: 400rpx;
 }
 .header .pay-info{
   font-size: 25rpx;
@@ -35,7 +47,7 @@
 }
 .bottom .bottom-info{
   padding: 20rpx 0rpx 20rpx 20rpx;
-  border-bottom: 1rpx solid #f2f2f2
+  border-bottom: 5rpx solid #726C6B
   
 }
 .bottom .method .money{
@@ -45,15 +57,28 @@
   margin-left: 5rpx
 }
 .bottom .method .money .text1{
-  font-size: 25rpx;
+  font-size: 30rpx;
+  color: #8a8a8a
 }
 .bottom .method .money .text2{
+  font-size: 30rpx;
   margin-right: 20rpx;
-  color: #a40035
+  color: #0F7E40
     
 }
+.bottom .method .money .dai-money{
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  color: #8a8a8a
+    
+}
+.bottom .method .money .split-line{
+  margin: -10rpx 5rpx 0rpx 5rpx;
+  font-size: 30rpx;
+}
 .bottom .method .money .text3{
- color: #a40035
+ color: #0F7E40;
+ font-size: 30rpx;
 }
 .bottom .method{
   line-height: 80rpx;
@@ -75,12 +100,13 @@
   height: 100%
 }
 .bottom .method .method2{
+  font-size: 30rpx;
   margin-left: 20rpx
 }
 .select-btn{
   
   height: 60rpx;
-  background-color: #A40035;
+  background-color: #0F7E40;
   color: #F5F5F5;
   text-align: center;
   line-height: 65rpx;

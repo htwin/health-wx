@@ -1,39 +1,54 @@
 var culDis= {
-  distance: function (la1, lo1, la2, lo2) {
 
-    var La1 = la1 * Math.PI / 180.0;
-
-    var La2 = la2 * Math.PI / 180.0;
-
-    var La3 = La1 - La2;
-
-    var Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;
-
-    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));
-
-    s = s * 6378.137;//地球半径
-
-    s = Math.round(s * 10000) / 10000;
-    0.241
-    
-
-    // console.log("计算结果", s)
-    var str = s.toString();
-    var newStr = "";
-    if(s>1){
-      newStr = str.substring(0, str.indexOf(".") + 2)+"公里"
-     
+  distance1: function (s, success) {
+    if (success) {
+      
+      var str = (s/1000).toString();
+      var newStr = "";//0.333333333333
+      console.log(s);
+      if (s > 1000) {
+        newStr = str.substring(0, str.indexOf(".") + 2) + "公里"
+      } else {
+        newStr = s + "米"
+      }
+      return newStr;
     }else{
-      newStr = (s*1000).toString()+"米"
+      return "";
     }
-   
 
 
-    return newStr
+  },
 
+  distance: function (la1, lo1, la2, lo2,success) {
+    if(success){
+      var La1 = la1 * Math.PI / 180.0;
+
+      var La2 = la2 * Math.PI / 180.0;
+
+      var La3 = La1 - La2;
+
+      var Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;
+
+      var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));
+
+      s = s * 6378.137;//地球半径
+      s = Math.round(s * 10000) / 10000;
+      //0.241
+      // console.log("计算结果", s)
+      var str = s.toString();
+      var newStr = "";//0.333333333333
+      if (s > 1) {
+        newStr = str.substring(0, str.indexOf(".") + 2) + "公里"
+      } else {
+        newStr = parseInt((s * 1000).toString()) + "米"
+      }
+      return newStr
+    }else{
+      return ""
+    }
   }
 }
 module.exports = {
   distance: culDis.distance,
- 
+  distance1: culDis.distance1,
 }

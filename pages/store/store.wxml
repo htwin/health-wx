@@ -3,28 +3,28 @@
 <!-- 头部 -->
   <view class="header">
       <view class="store-name">
-          国际店(NO.22)
+          {{store.name}}
       </view>
       <view class="business-hours">
-          营业时间:<text>周一至周日 10:00-23:59</text>
+          营业时间:<text>{{store.businessHours}}</text>
       </view>
       <view class="address">
         <view class="address-left">
             门店地址:
         </view>
-        <view class="address-detail">
-          成都市高新区长虹大酒店斜对面东方国际3栋1楼常乐足道
+        <view bindtap="openMap" class="address-detail">
+          {{store.address}}
         </view>
-        <view class="store-navigation">
+        <view bindtap="openMap" class="store-navigation">
             <image src="../../images/address.png"></image>
         </view>
       </view>
       <view class="store-tel">
-          <view class="store-tel-left">
+          <view bindtap="CallPhone" class="store-tel-left">
             联系电话:
           </view>
-          <view class="phone-num">
-              0816-2557878
+          <view bindtap="CallPhone" class="phone-num">
+              {{store.telephone}}
           </view>
           <view class="tel-img">
                <image src="../../images/telephone.png"></image>
@@ -41,9 +41,9 @@
           门店图片
       </view>
       <view class="store-images">
-          <image src="../../images/store1.png"></image>
-          <image src="../../images/store1.png"></image>
-          <image src="../../images/store1.png"></image>
+          <image src="{{store.img}}"></image>
+          <image src="{{store.img}}"></image>
+          <image src="{{store.img}}"></image>
       </view>
   </view>
 
@@ -56,8 +56,10 @@
           门店地图
       </view>
       <view class="store-map">
-          <map longitude="104.0507197400" latitude="30.6900170200" ></map>
+          <map longitude="{{store.longitude}}" latitude="{{store.latitude}}" ></map>
       </view>
   </view>
-
+<view  bindtap="toService" data-id="{{item.id}}" class="select-btn">
+    去预约
+  </view>
 </view>

@@ -8,8 +8,8 @@ Page({
   data: {
       //默认为休闲放松
       categoryId:"1",
-    categoryList:[],//类别列表
-      storeId:"",//门店id
+      categoryList:[],//类别列表
+      storeId:"1243881972120555520",//门店id
       healthItemList:[],//健康项目列表
       startTime:"",//服务开始时间
   },
@@ -19,7 +19,7 @@ Page({
       this.getHealthCategoryList();
       //获取传过来的门店id  
       this.setData({
-        storeId: e.storeId,
+        //storeId: e.storeId,
         startTime: e.startTime
       })
 

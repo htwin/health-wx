@@ -2,16 +2,16 @@
 
 .header .method{
   margin-top: 20rpx;
-  font-size: 26rpx;
  
-  height: 80rpx;
+ 
+  
   display: flex;
   flex-direction: row;
 }
 .header .method .method1{
-  margin: 15rpx 0rpx 0rpx 20rpx;
-  width: 60rpx;
-  height: 60rpx;
+  margin: 0rpx 0rpx 0rpx 30rpx;
+  width: 150rpx;
+  height: 150rpx;
 }
 .header .method .method1 image{
   border-radius: 100rpx;
@@ -19,29 +19,33 @@
   height: 100%
 }
 .header .method .method2{
-  margin-top: 10rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
   margin-left: 20rpx
 }
 .header .method .method3{
-  margin: 30rpx 0rpx 0rpx 350rpx;
-  color: #A40035;
-  text-decoration: underline
+  margin: 30rpx 0rpx 0rpx 200rpx;
+  color: black;
+  font-size: 30rpx;
+}
+.level-text{
+  margin: 50rpx 0rpx 0rpx 30rpx;
 }
 .middle{
   display: flex;
   flex-direction: row;
-  margin: 40rpx 0rpx 0rpx 30rpx;
+  margin: 40rpx 0rpx 0rpx 5rpx;
 }
 .middle .middle-line{
-  margin:35rpx -10rpx 0rpx -7rpx;
+  margin:50rpx 0rpx 0rpx 0rpx;
   height: 10rpx;
   width: 95rpx;
   background-color: #f2f2f2
 }
 .middle .vip-item .vip-image{
     padding-left: 10rpx;
-    width: 60rpx;
-    height:60rpx;
+    width: 80rpx;
+    height:80rpx;
 }
 .middle .vip-item .vip-image image{
 
@@ -49,6 +53,8 @@
     height:100%;
 }
 .middle .vip-item .vip-name{
+  width: 100rpx;
+  margin-left: 20rpx;
   margin-top: 10rpx;
 }
 .middle .vip-item {
@@ -60,15 +66,19 @@
   border-radius: 50rpx;
   height: 8rpx;
   width: 40rpx;
-  background-color: #A40035
+  background-color: #0F7E40
 }
 .bottom{
+  padding-top: 20rpx;
   background-color: #FAFAFA;
   height: 1000rpx;
 }
 .bottom .bottom-header{
+  margin-bottom: -8rpx;
+  font-size: 25rpx;
   padding: 20rpx;
-  color: #515151
+  color: black;
+  font-weight: 520;
 }
 .bottom .bottom-item{
   padding: 30rpx;
@@ -82,10 +92,11 @@
 }
 .bottom .bottom-item .item-left .item-image{
   margin-left: 20rpx;
-  width: 80rpx;
-  height: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 .bottom .bottom-item .item-left .item-name{
+  margin-left: 5rpx;
   text-align: center;
   width: 120rpx;
   font-size: 27rpx;

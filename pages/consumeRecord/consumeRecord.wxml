@@ -1,2 +1,16 @@
 <!--pages/consumeRecord/consumeRecord.wxml-->
-<text>没有消费记录</text>
+<view>
+    <view wx:if="{{consumeList.length<1}}" class="no-consume">
+        暂无消费记录
+    </view>
+    <view wx:if="{{consumeList.length>0}}" class="have-consume">
+        <view class="consume-item">
+            <view class="consume-info">
+                <text style="color: black; font-size: 30rpx;">2020年3月31日 20:00\n</text>
+                <text>天久店\n</text>
+                <text>三高调理\n</text>
+                <text>服务技师：xxxxx</text>
+            </view>
+        </view>
+    </view>
+</view>

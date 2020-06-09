@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/login/login",
+    "pages/user/user",
+    "pages/gift/gift",
+    "pages/search/search",
     "pages/toPay/toPay",
-    
     "pages/toProject/toProject",
-     "pages/login/login",
     "pages/pay/pay",
     "pages/payGift/payGift",
     "pages/share/share",
@@ -14,18 +16,15 @@
     "pages/projectInfo/projectInfo",
     "pages/technicianDetail/technicianDetail",
     "pages/toTechnician/toTechnician",
-    
     "pages/toService/toService",
     "pages/store/store",
-    "pages/search/search",
     "pages/userDetail/userDetail",
-    "pages/user/user",
-    "pages/gift/gift",
     "pages/logs/logs",
     "pages/order/order",
     "pages/message/message",
-    "pages/consumeRecord/consumeRecord"
-   
+    "pages/consumeRecord/consumeRecord",
+    "pages/vouchers/vouchers",
+    "pages/upgradeGuide/upgradeGuide"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,32 +34,32 @@
   },
   "tabBar": {
     "color": "#878787",
-    "selectedColor": "#d12a1a",
+    "selectedColor": "#0F7E40",
     "borderStyle": "white",
     "backgroundColor": "#fcfcfc",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/tabBar/home_2.png",
-        "selectedIconPath": "images/tabBar/home_1.png",
+        "iconPath": "images/tabBar/home_22.png",
+        "selectedIconPath": "images/tabBar/home_11.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/gift/gift",
-        "iconPath": "images/tabBar/store_2.png",
-        "selectedIconPath": "images/tabBar/store_1.png",
-        "text": "好礼"
+        "iconPath": "images/tabBar/store_22.png",
+        "selectedIconPath": "images/tabBar/store_11.png",
+        "text": "活动"
       },
       {
         "pagePath": "pages/order/order",
-        "iconPath": "images/tabBar/order_2.png",
-        "selectedIconPath": "images/tabBar/order_1.png",
+        "iconPath": "images/tabBar/order_22.png",
+        "selectedIconPath": "images/tabBar/order_11.png",
         "text": "订单"
       },
       {
         "pagePath": "pages/user/user",
-        "iconPath": "images/tabBar/mine_2.png",
-        "selectedIconPath": "images/tabBar/mine_1.png",
+        "iconPath": "images/tabBar/mine_22.png",
+        "selectedIconPath": "images/tabBar/mine_11.png",
         "text": "我的"
       }
     ]

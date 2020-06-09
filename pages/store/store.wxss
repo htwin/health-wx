@@ -28,11 +28,12 @@ font-size: 30rpx
 }
 .address .address-detail{
   font-size: 25rpx;
-  width: 500rpx;
+ 
   
 
 }
 .address .store-navigation{
+  margin: -10rpx 0rpx 0rpx 20rpx;
   width: 40rpx;
   height: 50rpx;
 }
@@ -51,12 +52,11 @@ font-size: 30rpx
 }
 .store-tel .phone-num{
 font-size: 25rpx;
-  width: 200rpx;
+  
 }
 .store-tel .tel-img{
-  margin-top: -10rpx;
-  margin-left: -10rpx;
-width: 40rpx;
+   margin: -10rpx 0rpx 0rpx 20rpx;
+  width: 40rpx;
   height: 50rpx;
 }
 .store-tel .tel-img image{
@@ -94,3 +94,15 @@ width: 40rpx;
   width: 700rpx;
   height: 430rpx;
 }
+.select-btn{
+  
+  height: 60rpx;
+  background-color: #0F7E40;
+  color: #F5F5F5;
+  text-align: center;
+  line-height: 65rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+

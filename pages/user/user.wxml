@@ -2,19 +2,22 @@
 <view>
   <view class="header">
     <view class="vip-image">
-      <image src="../../images/vip_1.png"></image>
+      <image src="../../images/vip_1_green.png"></image>
     </view>
     <view class="header-content">
-     <view class="user-header">
+      <view class="user-header">
         <view class="user-image" bindtap="toUserInfo">
-          <image src="../../images/store1.png"></image>
+          <image src="../../images/no_user_header.png"></image>
         </view>
         <view class="user-info">
-          <text bindtap="toUserInfo">{{loginUser.isVip==1?loginUser.name:'加入乐享会'}}\n</text>
-          <text>{{loginUser.isVip==1?loginUser.telephone:loginUser.name}}</text>
+          <text bindtap="toUserInfo">{{loginUser.isVip==1?loginUser.name:'加入我们'}}\n</text>
+          <text>{{loginUser.isVip==1?loginUser.telephone:loginUser.name}}\n</text>
+          <view bindtap="toPay" class="user_banlance">余额：￥{{loginUser.balance}}</view>
+          
         </view>
+
       </view>
-      <view class="money">
+      <!-- <view class="money">
         <view class="balance" >
           余额:<text>￥{{loginUser.balance}}\n</text> 
           充值余额:<text>￥{{loginUser.rechargeBalance}}\n</text> 
@@ -23,83 +26,81 @@
         <view bindtap="toPay" class="recharge">
           去充值
         </view>
-      </view>
+      </view> -->
     </view>
   </view>
   <view class="content">
     <view class="content-item">
-   
-        <view bindtap="toVipIntro" class="item-image">
-          <image src="../../images/user-item1.png"></image>
-        </view>
-        <view bindtap="toVipIntro" class="item-info">
-          会员说明
-        </view>
-        <view bindtap="toVipIntro"  class="arrow">
-            <image src="../../images/arrow-right.png"></image>
-        </view>
-       
+
+      <!-- <view bindtap="toVipIntro" class="item-image">
+        <image src="../../images/user-item1.png"></image>
+      </view> -->
+      <view bindtap="toVipIntro" class="item-info">
+        会员说明
+      </view>
+      <view bindtap="toVipIntro" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
+
     </view>
 
     <view class="content-item">
-        <view class="item-image">
-          <image  bindtap="toMyGift" src="../../images/user-item2.png"></image>
-        </view>
-        <view bindtap="toMyGift" class="item-info">
-          好礼红包
-        </view>
-        <view bindtap="toMyGift" class="arrow">
-            <image src="../../images/arrow-right.png"></image>
-        </view>
+      
+      <view bindtap="toMyGift" class="item-info">
+        好礼红包
+      </view>
+      <view bindtap="toMyGift" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
     </view>
 
     <view class="content-item">
-        <view class="item-image">
-          <image bindtap="toConsumeRecord" src="../../images/user-item3.png"></image>
-        </view>
-        <view bindtap="toConsumeRecord" class="item-info">
-          消费记录
-        </view>
-        <view bindtap="toConsumeRecord" class="arrow">
-            <image src="../../images/arrow-right.png"></image>
-        </view>
+     
+      <view bindtap="toConsumeRecord" class="item-info">
+        消费记录
+      </view>
+      <view bindtap="toConsumeRecord" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
     </view>
 
-   
-
-    <view class="content-item">
-        <view bindtap="toShare" class="item-image">
-          <image src="../../images/user-item5.png"></image>
-        </view>
-        <view bindtap="toShare" class="item-info">
-          邀请好友
-        </view>
-        <view bindtap="toShare" class="arrow">
-            <image src="../../images/arrow-right.png"></image>
-        </view>
+ <view class="content-item">
+     
+      <view bindtap="toVouchers" class="item-info">
+        代金券
+      </view>
+      <view bindtap="toVouchers" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
     </view>
 
     <view class="content-item">
-        <view bindtap="toMessage" class="item-image">
-          <image src="../../images/user-item6.png"></image>
-        </view>
-        <view bindtap="toMessage" class="item-info">
-          消息中心
-        </view>
-        <view bindtap="toMessage" class="arrow">
-            <image src="../../images/arrow-right.png"></image>
-        </view>
+      
+      <view bindtap="toShare" class="item-info">
+        邀请好友
+      </view>
+      <view bindtap="toShare" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
+    </view>
+
+    <view class="content-item">
+     
+      <view bindtap="toMessage" class="item-info">
+        消息中心
+      </view>
+      <view bindtap="toMessage" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
     </view>
     <view class="content-item">
-        <view bindtap="toContact" class="item-image">
-          <image src="../../images/user-item7.png"></image>
-        </view>
-        <view bindtap="toContact" class="item-info">
-          关于我们
-        </view>
-        <view bindtap="toContact" class="arrow">
-            <image src="../../images/arrow-right.png"></image>
-        </view>
+     
+      <view bindtap="toContact" class="item-info">
+        关于我们
+      </view>
+      <view bindtap="toContact" class="arrow">
+        <image src="../../images/arrow_right.png"></image>
+      </view>
     </view>
   </view>
 </view>

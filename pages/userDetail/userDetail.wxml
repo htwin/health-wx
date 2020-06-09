@@ -9,7 +9,7 @@
       头像
     </view>
     <view class="item-image">
-      <image src="../../images/store1.png"></image>
+      <image src="../../images/no_user_header.png"></image>
     </view>
     <view class="arrow">
       <image src="../../images/arrow-right.png"></image>

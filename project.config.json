@@ -67,6 +67,118 @@
 					"id": -1,
 					"name": "pages/pay/pay",
 					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vipIntro/vipIntro",
+					"pathName": "pages/vipIntro/vipIntro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/contact/contact",
+					"pathName": "pages/contact/contact",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/toPay/toPay",
+					"pathName": "pages/toPay/toPay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/message/message",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/consumeRecord/consumeRecord",
+					"pathName": "pages/consumeRecord/consumeRecord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/toProject/toProject",
+					"pathName": "pages/toProject/toProject",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/share/share",
+					"pathName": "pages/share/share",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vipIntro/vipIntro",
+					"pathName": "pages/vipIntro/vipIntro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/payGift/payGift",
+					"pathName": "pages/payGift/payGift",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/gift/gift",
+					"pathName": "pages/gift/gift",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/technicianDetail/technicianDetail",
+					"pathName": "pages/technicianDetail/technicianDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upgradeGuide/upgradeGuide",
+					"pathName": "pages/upgradeGuide/upgradeGuide",
 					"scene": null
 				}
 			]

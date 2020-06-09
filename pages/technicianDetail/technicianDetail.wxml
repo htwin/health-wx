@@ -10,7 +10,7 @@
     <view bindtap="toService" class="section_cont">
       <view class="store_name">
         <text class="technician-name">{{technician.name}}</text>
-        <text space="ensp">  ￥{{technician.price}}元/分钟</text>
+        <!-- <text space="ensp">  ￥{{technician.price}}元/分钟</text> -->
       </view>
       <view class="tech-price">评分：{{technician.score}}分</view>
     </view>

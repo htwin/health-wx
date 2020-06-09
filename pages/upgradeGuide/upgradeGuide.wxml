@@ -1,0 +1,84 @@
+<!--pages/upgradeGuide/upgradeGuide.wxml-->
+<view class="content">
+  <view class="header">
+      <view class="top1">
+          今勿易会员升级指南
+      </view>
+      <view class="top2">
+          今勿易保健服务有限公司
+      </view>
+      <view class="top3">
+          <image src="../../images/upgrade-guide.png"></image>
+      </view>
+      <view class="top4">
+         会员等级取充值最高一次。
+      </view>
+  </view>
+  <view class="bottom">
+      <view class="item">
+          <view class="item-left">
+              <view>黄金</view>
+              <view>送五次搓盐</view>
+              <view>足浴享受八折</view>
+          </view>
+          <view class="item-middle">
+              <image src="../../images/vip1.png"></image>
+          </view>
+          <view class="item-right">
+            500元
+          </view>
+      </view>
+       <view class="item">
+          <view class="item-left">
+              <view>白金</view>
+              <view>店面前一百名送私人刀具</view>
+              <view>足浴享受八折</view>
+          </view>
+          <view class="item-middle">
+              <image src="../../images/vip2.png"></image>
+          </view>
+          <view class="item-right">
+            1000元
+          </view>
+      </view>
+       <view class="item">
+          <view class="item-left">
+              <view>砖石</view>
+              <view>送私人刀具</view>
+              <view>足浴享受八折</view>
+          </view>
+          <view class="item-middle">
+              <image src="../../images/vip3.png"></image>
+          </view>
+          <view class="item-right">
+            3000元
+          </view>
+      </view>
+       <view class="item">
+          <view class="item-left">
+              <view>至尊</view>
+              <view>送私人刀具</view>
+              <view>足浴享受七折</view>
+          </view>
+          <view class="item-middle">
+              <image src="../../images/vip4.png"></image>
+          </view>
+          <view class="item-right">
+            5000元
+          </view>
+      </view>
+       <view class="item">
+          <view class="item-left">
+              <view>尊享卡</view>
+              <view>送私人刀具</view>
+              <view>足浴享受六折</view>
+          </view>
+          <view class="item-middle">
+              <image src="../../images/vip5.png"></image>
+          </view>
+          <view class="item-right">
+            10000元
+          </view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/vouchers/vouchers.wxml-->
+ <view  class="no-vouchers">
+        暂无代金券
+    </view>

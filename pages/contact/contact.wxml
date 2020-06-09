@@ -4,22 +4,23 @@
         <view class="logo">
             <image src="../../images/logo.png"></image>
         </view>
-        <view class="info">
+        <!-- <view class="info">
             足疗·踩跷·推拿
-        </view>
+        </view> -->
     </view>
     <view class="bottom">
         <view class="title">
-            常乐文化
+            今勿易文化
         </view>
         <view class="content">
-            <text>
-                使命:提高亚健康人群生活品质
-                愿景:拥有健康常乐人生
-                定位：亚健康调理平台
-                身份：专注亚健康调养·始于1999
-                价值观：安全、舒适、有效
-            </text>
+            <text decode="{{true}}">
+                理念：劳动成就人生 专业服务社会
+                精神：学习沟通 自我超越
+                价值观：顾客第一、员工第二、股东第三
+                使命：为顾客送去温暖和舒适
+                &emsp;&emsp;&emsp;让员工拥抱温暖和丰收
+                &emsp;&emsp;&emsp;创品牌体现价值和专业
+                &emsp;&emsp;&emsp;带行业获得尊重和赞美</text>
         </view>
 
          <view class="title">
@@ -27,10 +28,10 @@
         </view>
         <view class="content">
             <text>
-                官方微信:常乐健康调理
-                官方微博:常乐健康调理
-                官方号码:400-633-0933
-                官网网站:<text style="color:#A40035">www.changlechina.com</text>
+                官方微信:
+                官方微博:
+                官方号码:
+                官网网站:
             </text>
         </view>
     </view>

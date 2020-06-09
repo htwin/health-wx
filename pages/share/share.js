@@ -14,7 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
-
+  toShare:function(){
+      wx.showModal({
+        showCancel: false,
+        content: '暂未开放',
+      })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

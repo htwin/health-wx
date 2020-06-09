@@ -125,7 +125,7 @@ Page({
               key: 'loginUser',
               data: loginUser,
             })
-            wx.switchTab({
+          wx.reLaunch({
               url: '/pages/index/index',
             })
         }else{
