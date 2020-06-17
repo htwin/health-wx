@@ -77,7 +77,8 @@
         </view>
         
     </view>
-    <view  bindtap="doPay" class="select-btn">
-    确认支付：￥{{payOrder.price}}
+    <view  bindtap="doReserve" class="select-btn">
+    <!-- 确认支付：￥{{payOrder.price}} -->
+    预定
   </view>
 </view>

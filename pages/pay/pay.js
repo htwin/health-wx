@@ -62,6 +62,53 @@ Page({
         }
       })
   },
+
+//预定
+  doReserve:function(){
+    var that = this;
+    var order = {};
+    order.id = this.data.payOrder.id;
+    //order.actualPay = this.data.payOrder.price;
+    // //将开始时间赋给 需要存入数据库的订单对象
+    // order.starttime = this.data.starttime;
+    console.log(order)
+    var url = app.globalData.url + "/order/doReserve"
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: url,
+      method: "post",
+      data: order,
+      success: function (res) {
+        wx.hideLoading();
+        if (res.data.success) {
+          clearInterval(that.data.timer);//清除倒计时
+          //状态为已支付
+          that.setData({
+            isPay: true
+          })
+          wx.showModal({
+            showCancel: false,
+            content: '预定成功',
+            success(res) {
+              if (res.confirm) {
+                wx.reLaunch({
+                  url: '/pages/order/order',
+                })
+              }
+            }
+          })
+
+        } else {
+          wx.showModal({
+            showCancel: false,
+            content: '系统错误！！',
+          })
+        }
+      }
+    })
+  },
   /**
      *支付 
      */
