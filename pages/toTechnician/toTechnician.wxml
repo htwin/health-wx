@@ -9,7 +9,7 @@
         <view class="item">
           <!--image-->
           <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   data-id="{{item.id}}"    class="section_image"> 
-            <image  src="{{baseImgUrl+item.img}}" mode="aspectFill"></image>
+            <image  src="{{imgUrl+item.img}}" mode="aspectFill"></image>
           </view>
           <!--content-->
           <view bindtap="toTechnicianDetail" data-price="{{item.price}}"   data-id="{{item.id}}"  class="section_cont">

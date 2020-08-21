@@ -4,7 +4,7 @@
   <view class="nav_section_items">
     <!--image-->
     <view bindtap="toService" class="section_image">
-      <image src="../../images/technician3.png" mode="aspectFill"></image>
+      <image src="{{imgUrl+technician.img}}" mode="aspectFill"></image>
     </view>
     <!--content-->
     <view bindtap="toService" class="section_cont">

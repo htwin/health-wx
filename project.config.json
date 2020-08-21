@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wx75e03d2b3a04eb67",
+	"appid": "wx411fa3743d03269b",
 	"projectname": "health",
 	"debugOptions": {
 		"hidedInDevtools": []

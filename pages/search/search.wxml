@@ -11,9 +11,9 @@
       </view>
 
     </view>
-    <!-- <view class="search-btn">
+    <view class="search-btn">
       <button size="mini" bindtap="doSearch">搜索</button>
-    </view> -->
+    </view>
   </view>
 <view class="nav_section">
 
@@ -22,7 +22,7 @@
           <view class="item">
             <!--image-->
             <view bindtap="toService" wx:for-index="index" data-id="{{item.id}}" data-index="{{index}}" class="section_image">
-              <image src="{{item.img}}" mode="aspectFill"></image>
+              <image src="{{imgUrl+item.img}}" mode="aspectFill"></image>
             </view>
             <!--content-->
             <view bindtap="toService" wx:for-index="index" data-id="{{item.id}}" data-index="{{index}}" class="section_cont">
@@ -45,9 +45,5 @@
           </view>
         </view>
       </block>
-
-
     </view>
-
-
 </view>

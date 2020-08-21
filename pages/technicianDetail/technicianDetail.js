@@ -12,7 +12,8 @@ Page({
     storeId: "",//门店id
     startTime: "",//服务开始时间
     price: 0,//价格
-    serviceTime:0//服务时间 分钟
+    serviceTime:0,//服务时间 分钟
+    imgUrl: app.globalData.imgUrl//图片地址
   },
   toPay:function(){
     var that = this;

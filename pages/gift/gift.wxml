@@ -1,5 +1,28 @@
 <view>
-    <view class="gift">
+
+ <view wx:if="{{activityList.length<1}}" class="no-activity">
+        暂无活动
+    </view>
+     <block wx:if="{{activityList.length>0}}" wx:for="{{activityList}}" wx:key="key">
+          <view  class="have-activity">
+          
+                  <view class="activity-item">
+                      <view class="activity-info">
+                        {{item.content}}
+                          <!-- <text>项目：{{item.healthItemName}}\n</text>
+                          <text>店面：{{item.storeName}}\n</text>
+                          <text>技师：{{item.technicianName}}\n</text>
+                          <text>时间：{{item.starttime}}</text> -->
+                      </view>
+                  </view>
+            
+          </view>
+    </block>
+
+
+
+
+    <!-- <view class="gift">
         <text class="gift-text">感恩有您</text>
         <view bindtap="toPayGift" class="gift-image">
             <image src="../../images/gift_3.png"></image>
@@ -24,5 +47,5 @@
         <view class="gift-image">
             <image bindtap="toPayGift" src="../../images/gift_3.png"></image>
         </view>
-    </view>
+    </view> -->
 </view>

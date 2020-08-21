@@ -6,18 +6,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    store: {}//门店实体
+    store: {},//门店实体
+    imgDetail:[],
+    imgUrl: app.globalData.imgUrl//图片地址
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
+    
+    // console.log("size::" + this.imgDetail.length);
     //获取传过来的id
     var storeId = e.storeId;
     if (storeId != undefined) {
       //根据id查询门店信息
       this.getStoreById(storeId);
+    
+      // this.setData({
+      //   imgDetail : this.store.imgDetail.split(",")
+      // })
+      // console.log(this.imgDetail)
+     
     } else {
       wx.showToast({
         title: '异常id.undefined',
@@ -39,10 +49,18 @@ Page({
       success: function (res) {
         if (res.data.success) {
           wx.hideLoading();
-          that.setData({
-
-            store: res.data.data
-          })
+          if (res.data.data.imgDetail!=null){
+            that.setData({
+              store: res.data.data,
+              imgDetail: res.data.data.imgDetail.split(",")
+            })
+          }else{
+            that.setData({
+              store: res.data.data,
+              
+            })
+          }
+         
         } else {
           wx.hideLoading()
           wx.showToast({

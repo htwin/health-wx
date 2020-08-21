@@ -1,12 +1,12 @@
 <!--pages/pay/pay.wxml-->
 <view>
 <view class="header-line">
-  订单将在<text style="color:#A40035">{{minute}}:{{second}}</text>后关闭，请尽快付款！
+  订单将在<text style="color:#A40035">{{minute}}:{{second}}</text>后关闭，请尽快预定！
 </view>
     <view class="header">
     
         <view class="tech-image">
-          <image src="{{payOrder.img}}"></image>
+          <image src="{{imgUrl+payOrder.img}}"></image>
           <view>
             {{payOrder.technicianName}}
           </view>
@@ -22,7 +22,7 @@
                 服务项目：{{payOrder.healthItemName}}/{{payOrder.serviceTime}}分钟
             </view>
             <view class="pay-money">
-                项目金额： <text style="color:#A40035">￥{{payOrder.price}}</text>
+                项目金额： <text style="color:#0F7E40">￥{{payOrder.price}}</text>
             </view>
         </view>
         <view class="cancel">x</view>
@@ -52,7 +52,7 @@
         </view>
         <view class="method">
             <view class="method1">
-                <image src="../../images/selected.png"></image>
+                <image src="../../images/select_fill.png"></image>
             </view>
              <!-- <view class="method1">
                 <image src="../../images/wx_logo.png"></image>

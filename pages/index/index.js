@@ -32,30 +32,27 @@ Page({
   
   onLoad: function () {
 
-    
-    
-
-    //判断是否登录
-    var isLogin = wx.getStorageSync("loginUser");
+    // //判断是否登录
+    // var isLogin = wx.getStorageSync("loginUser");
   
-    if (isLogin){
-      //获取用户地理位置
-      this.getAddressDetail();
-      this.getProvinceList();//加载省份 城市 二级联动
+    // if (isLogin){
+    //   //获取用户地理位置
+    //   this.getAddressDetail();
+    //   this.getProvinceList();//加载省份 城市 二级联动
 
 
-      //加载城市列表
-      this.getCityList();
-
-      
-
+    //   //加载城市列表
+    //   this.getCityList();
 
       
-    }else{
-      wx.navigateTo({
-        url: '/pages/login/login',
-      })
-    }
+
+
+      
+    // }else{
+    //   wx.navigateTo({
+    //     url: '/pages/login/login',
+    //   })
+    // }
     
     
     
@@ -423,5 +420,36 @@ Page({
     })
       console.log("页面隐藏")
   },
+  onShow:function(){
+    //判断是否登录
+    var isLogin = wx.getStorageSync("loginUser");
+
+    if (isLogin) {
+      //获取用户地理位置
+      this.getAddressDetail();
+      this.getProvinceList();//加载省份 城市 二级联动
+
+      //加载城市列表
+      this.getCityList();
+
+    } else {
+
+      wx.showModal({
+        title: '提示',
+        content: '请登录，点击确定跳转到登录界面',
+        
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+
+
+      
+    }
+  }
  
 })

@@ -16,7 +16,8 @@ Page({
     //用户所在地的经纬度
     userLongitude: "0",
     userLatitude: "0",
-    clickIndex: -1//点击的门店索引
+    clickIndex: -1,//点击的门店索引
+    imgUrl: app.globalData.imgUrl//图片地址
   },
 
   getInputValue:function(e){

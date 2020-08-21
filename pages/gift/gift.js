@@ -1,11 +1,12 @@
 // pages/gift/gift.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    activityList:[]
   },
   toPayGift:function(){
       wx.navigateTo({
@@ -16,9 +17,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getActivityAllList();
   },
 
+  /**
+   * 获取所有活动列表
+   */
+  getActivityAllList:function(){
+    var that = this;
+    var url = app.globalData.url + "/activity/activityAllList";
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: url,
+      method: "get",
+      success: function (res) {
+        wx.hideLoading();
+        if (res.data.success) {
+          that.setData({
+            activityList: res.data.data
+          })
+        } else {
+          wx.showModal({
+            showCancel: false,
+            content: '加载活动失败',
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

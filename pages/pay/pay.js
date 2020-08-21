@@ -13,7 +13,8 @@ Page({
     second:20,//秒
     timer:'',//定时器名字
     starttime:"",//服务开始时间  存入数据库的 未处理的
-    isPay:false//是否支付
+    isPay:false,//是否支付
+    imgUrl: app.globalData.imgUrl//图片地址
   },
 
   /**

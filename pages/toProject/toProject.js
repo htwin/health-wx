@@ -12,6 +12,7 @@ Page({
       storeId:"1243881972120555520",//门店id
       healthItemList:[],//健康项目列表
       startTime:"",//服务开始时间
+    imgUrl: app.globalData.imgUrl//图片地址
   },
   onLoad:function(e){
 
@@ -19,7 +20,7 @@ Page({
       this.getHealthCategoryList();
       //获取传过来的门店id  
       this.setData({
-        //storeId: e.storeId,
+        storeId: e.storeId,
         startTime: e.startTime
       })
 

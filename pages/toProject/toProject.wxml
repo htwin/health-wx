@@ -27,7 +27,7 @@
        <view class="item">
         <!--image-->
         <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}" class="section_image">
-          <image src="{{item.img}}" mode="aspectFill"></image>
+          <image src="{{imgUrl+item.img}}" mode="aspectFill"></image>
         </view>
         <!--content-->
         <view bindtap="toTechnician" data-servicetime="{{item.serviceTime}}" data-id="{{item.healthItemId}}" class="section_cont">
@@ -44,7 +44,7 @@
         <view class="item-price">
         <view class="service-time">{{item.serviceTime}}分钟</view>
         <view class="service-price">{{item.price}}元</view>
-        <view class="service-price">{{item.price}}元(会员)</view>
+        <view class="service-price">{{item.vipPrice}}元(会员)</view>
           <view bindtap="toProjectInfo" data-id="{{item.healthItemId}}" class="store_detail">查看详情       </view>
         </view>
       </view>

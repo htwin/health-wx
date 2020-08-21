@@ -41,9 +41,19 @@
           门店图片
       </view>
       <view class="store-images">
-          <image src="{{store.img}}"></image>
-          <image src="{{store.img}}"></image>
-          <image src="{{store.img}}"></image>
+        
+       
+        <block wx:if="{{imgDetail.length>0}}"  wx:for="{{imgDetail}}"  wx:key="key">
+             <image src="{{imgUrl+item}}"></image>
+        </block>
+        <block wx:if="{{imgDetail.length<1}}">
+        <image src="{{imgUrl+store.img}}"></image>
+          <image src="{{imgUrl+store.img}}"></image>
+          <image src="{{imgUrl+store.img}}"></image>
+        </block>
+          <!-- <image src="{{imgUrl+store.img}}"></image>
+          <image src="{{imgUrl+store.img}}"></image>
+          <image src="{{imgUrl+store.img}}"></image> -->
       </view>
   </view>
 
